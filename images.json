@@ -1,0 +1,18 @@
+{
+  "young_ester": {
+    "src": "images/ester_as_young_woman.png",
+    "textContent": "Ester as a young woman, 1926?"
+  },
+  "boarding_lisbon": {
+    "src": "images/boarding_in_lisbon.png",
+    "textContent": "Waiting to board in Lisbon, 1939"
+  },
+  "Valparaiso": {
+    "src": "images/ester_rosita_nano_1941_valparaiso.png",
+    "textContent": "Ester, Rosita and Nano in Valparaiso, 1941"
+  },
+  "ester_husband": {
+    "src": "images/ester_second_husband.png",
+    "textContent": "Ester, Brana and Mina with their Husbands, 1950s?"
+  }
+}

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rosita Interview - Transcript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;	
+	    font-size: 10.2pt;
+            margin: 20px;
+        }
+        /* Flex container for side-by-side layout */
+        #container {
+            display: flex;
+            gap: 20px;
+        }
+        /* Table of Contents styling */
+        #toc {
+            flex: 1; /* approx 1/3 of container width */
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            padding: 30px;
+        }
+        #toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #toc li {
+            margin-bottom: 8px;
+        }
+        #toc a {
+            text-decoration: none;
+            color: #333333;
+        }
+        #toc a:hover {
+            text-decoration: underline;
+        }
+        /* Transcript container styling */
+        #transcript-container {
+            flex: 2; /* approx 2/3 of container width */
+            border: 1px solid #ccc;
+            height: 70vh;
+            overflow-y: auto;
+            padding: 30px;
+        }
+        /* Title above Transcript */
+        #transcript-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        /* Anchor div styling: extra top padding so that the header is not hidden */
+        .section-anchor {
+            padding-top: 60px;
+            margin-top: -60px;
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+        /* Speaker name styling */
+        .speaker-rosita {
+            color: darkblue;
+            font-weight: bold;
+        }
+        .speaker-eric {
+            color: darkgreen;
+            font-weight: bold;
+        }
+        /* Timestamp styling using Roboto and bold */
+        .timestamp {
+            font-family: 'Roboto', sans-serif;
+            font-weight: bold;
+            color: black;
+        }
+    </style>
+    <!-- Import Roboto from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Rosita Interview - Transcript</h1>
+    <!-- Audio Player -->
+    <audio id="audioPlayer" controls>
+        <source src="audio/RositaInterview4_29_20-11_17_23.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <!-- Flex Container for TOC and Transcript -->
+    <div id="container">
+        <!-- Table of Contents -->
+        <div id="toc">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#section-1" onclick="jumpToSection('section-1', 0); return false;">WWII Outbreak and Early Reflections on the War (0:00:00)</a></li>
+                <li><a href="#section-2" onclick="jumpToSection('section-2', 19); return false;">Mina and Brana's Journey from Orhei/Orgeyev to Lisbon (0:00:19)</a></li>
+                <li><a href="#section-3" onclick="jumpToSection('section-3', 122); return false;">A Childhood Memory: The Unusual Bathing Incident (0:02:02)</a></li>
+                <li><a href="#section-4" onclick="jumpToSection('section-4', 253); return false;">Family Background: León’s Parents and the Vicuña Mackenna Building (0:04:13)</a></li>
+                <li><a href="#section-5" onclick="jumpToSection('section-5', 370); return false;">Religious Practices and Abram’s Devotion in the Family (0:06:10)</a></li>
+                <li><a href="#section-7" onclick="jumpToSection('section-7', 464); return false;">Ester's Second Marriage (0:07:44)</a></li>
+                <li><a href="#section-8" onclick="jumpToSection('section-8', 531); return false;">Descriptions of Ester's Personality (0:08:51)</a></li>
+                <li><a href="#section-9" onclick="jumpToSection('section-9', 675); return false;">The Importance of Education in Ester's Family (0:11:15)</a></li>
+                <li><a href="#section-10" onclick="jumpToSection('section-10', 961); return false;">International Connections and Memories of David Braylovsky (0:16:01)</a></li>
+                <li><a href="#section-11" onclick="jumpToSection('section-11', 1265); return false;">Rosita's Memories of Her Father (0:21:05)</a></li>
+                <li><a href="#section-12" onclick="jumpToSection('section-12', 1341); return false;">The Marble House, Earthquake, and Family Tragedy (0:22:21)</a></li>
+                <li><a href="#section-13" onclick="jumpToSection('section-13', 1500); return false;">School Memories and Early Friendships in Concepción (0:25:00)</a></li>
+                <li><a href="#section-14" onclick="jumpToSection('section-14', 1578); return false;">Language Challenges and Pursuing Further Education (0:26:18)</a></li>
+                <li><a href="#section-15" onclick="jumpToSection('section-15', 1635); return false;">Natalio Berman, Communist Congressman and Friend of José's (0:27:15)</a></li>
+                <li><a href="#section-16" onclick="jumpToSection('section-16', 1860); return false;">Observations on the Early Pandemic (0:31:00)</a></li>
+            </ul>
+        </div>
+        <!-- Transcript Container -->
+        <div id="transcript-container">
+            <pre>
+<span class="speaker-rosita">Rosita</span>
+<div id="section-1" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(0); return false;">0:00:00</a>
+Because the Second World War started in the middle of the year 1939.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(6); return false;">0:00:06</a>
+Yes, they arrived just after Hitler had invaded Czechoslovakia or something like that. 
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(8); return false;">0:00:08</a>
+Yes, something like that.
+But evidently the preparations must have taken a long time, right?
+For them to arrive in Lisbon it shouldn't have been that easy.
+
+<span class="speaker-eric">Eric</span>
+<div id="section-2" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(19); return false;">0:00:19</a>
+Yes, yes, I would really love to know more about that trip. One thing that Goyo told me was that when they arrived, it seems that they passed through France, Mina and Brana, on their way to Lisbon. And he told me that when they arrived in France, they sent all their money to Moldova, to their family. Because they thought it was made of gold, America. They had heard something like that.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(52); return false;">0:00:52</a>
+It was made of what?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(54); return false;">0:00:54</a>
+Of gold.
+
+
+<img src="images/boarding_in_lisbon.png" alt="Lisbon" width="600">
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(56); return false;">0:00:56</a>
+Of gold?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(58); return false;">0:00:58</a>
+That's what Goyo said, it seems.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(60); return false;">0:01:00</a>
+I really don't have any memory of that part.
+I don't know what the ship was called.
+But you'll probably be able to find that, right? Yes, I think Lali knows that. And in fact, it seems that Lali works in a museum.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(72); return false;">0:01:12</a>
+She has several photos and a lot of information about the family that she managed to put in the museum. So I don't know when they will put it, but it will be on the internet. So I told her to let me know when they appear. But one thing that I would love to know, was, I don't know if you remember something about how your dad was
+and some details about Brana and Esther. I don't know if you remember anecdotes or stories?
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-3" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(122); return false;">0:02:02</a>
+Look, I remember an anecdote that was very curious to me, as I have not forgotten. I must have been, let's see, 10 or 11 years old. And, the truth is, Naya was married to Simon Bergsten. And I went to see the house, I imagine it was a walk for me, I don't know. And Brana seems to have gone to bathe or something like that. And then Simon called me so I could see her standing naked.
+I still don't understand the reason, but he called me to look at her as she saw her.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(176); return false;">0:02:56</a>
+Was he bragging about his wife?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(180); return false;">0:03:00</a>
+I don't know. I remember her standing in the bathroom, naked, and I was looking at her. That's one of the... that could be called an anecdote. And then...
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(201); return false;">0:03:21</a>
+That was when you were living in Santiago then.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(203); return false;">0:03:23</a>
+Hello? Hello?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(205); return false;">0:03:25</a>
+Well, as I was saying, when they had just gotten married, before having a child. Just married. How strange.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(224); return false;">0:03:44</a>
+He was exhibiting her, I probably found her very pretty I think yes, I think it must be something like that... and she looked I remember she looked good. But like I say, I don't remember it anymore. I'm sure it would be very shocking. And the other thing, which can be anecdotal too,
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-4" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(253); return false;">0:04:13</a>
+About León's parents, Don Abraham and Mrs. Lea, those are León's parents. 
+
+<span class="speaker-eric">Eric</span>
+Ah, I didn't know Leike was a nickname for Lea. ah I always called her Leike.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(265); return false;">0:04:25</a>
+Leike. Leike is a...
+Let's see... A diminutive. Leike is how you call the Leas.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(271); return false;">0:04:31</a>
+It's like a nickname.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(273); return false;">0:04:33</a>
+Yes, something like that. Leike. Well, they lived... Let's see, Leike and Don Abraham lived until Don Abraham died in an apartment on a street that is in, when arriving to Vicuña Mackenna. And in that same building, for many years, Brana lived with Simón and his children, in the same building.
+But it's not the same date. First Brana with her family, until they went to Israel. And, by chance, the same building where Leon's parents lived. There, well, they lived in that building,  Sari, Lali, Osvaldo, in short. And he... I don't know.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(359); return false;">0:05:59</a>
+My dad always tells me that Abraham was very religious. Do you remember anything about that?
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-5" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(370); return false;">0:06:10</a>
+Abraham? Well, yes, Abraham read in all Jewish festivals, for example, in Pesach, you have to read, the four questions, and in short, there is a whole ritual. Well, he liked to do it when he was in the chapel. And of course, both the lady and Don Abraham were very observant. All the important parties, the high parties that are called, went to the temple.
+
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(437); return false;">0:07:17</a>
+How would you describe Ester? 
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(440); return false;">0:07:20</a>
+I think that... I would describe her more... I would say that she was more... more quiet.
+More quiet. And... No, more quiet. Look, I have... I remember that I have... Let's see, how can I tell you...
+My mom was married in the second announcement with a man of surname Poniachi, that's what I told you, right?
+
+<img src="images/ester_second_husband.png" alt="Ester and Poniachi" width="600">
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(462); return false;">0:07:42</a>
+Yes, you told me that.
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-7" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(464); return false;">0:07:44</a>
+And she was married, how many years would it be? I don't know, four, five, six years, something like that. While I was still a girl and I lived with them. We lived in an apartment, it wasn't small, but it wasn't a big space. And I never heard her argue with this gentleman. That is to say, she separated from him, I think it was shortly after I got married that she separated, because I think he was at my wedding. I would have to check the photos. And I never heard a fight. I mean, Ester managed the situation so that we didn't have any awareness of any problems with her relationship. I don't know if you understand me. I've never heard of...
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(527); return false;">0:08:47</a>
+You would never have guessed that they had problems?
+
+10
+<a href="#" class="timestamp" onclick="jumpToTime(530); return false;">0:08:50</a>
+Extremely...
+Oh, the call got cut off. Can you hear me? Hello?
+Hello? Yes, I can hear you.
+
+<span class="speaker-eric">Eric</span>
+<div id="section-8" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(536); return false;">0:08:56</a>
+Perfect.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(537); return false;">0:08:57</a>
+She was extremely discreet in that sense. I don't know if you follow the idea.
+I don't know if you understand me.
+
+<span class="speaker-eric">Eric</span>
+She didn't complain.
+
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(545); return false;">0:09:05</a>
+No, she was very reserved. She was very reserved with her problems.
+She never dragged my brother and me into any of her problems. We never knew about her problems. Do you understand? Yes. A person of tremendous dignity. I don't know if I'm saying it right.
+
+<img src="images/ester_as_young_woman.png" alt="Ester young" width="400">
+
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(576); return false;">0:09:36</a>
+No, yes, sure. I understand.
+I mean, that's how she looks in all her photos. From the photos, I could guess that she was like that.
+
+<span class="speaker-rosita">Rosita</span>
+I mean, how can I say it in Spanish? She was very ladylike. She was a lady, let's say, although she didn't have a formal and important education. Probably there were many things about general culture that she didn't know,
+because she didn't have the opportunity. but she had a very... very developed human dignity. 
+
+<span class="speaker-eric">Eric</span>
+<div id="section-9" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(675); return false;">0:11:15</a>
+From what Patricia told, me parents of Ester were doing relatively well. And for example, they valued education a lot.
+
+<img src="images/sara_and_ruben.png" alt="Sara and Ruben" width="400">
+
+What really impacted me was the fact that Mari had taught French, for example. Mari, it seems that she reached high levels of education.
+
+<span class="speaker-rosita">Rosita</span>
+She must have had a good education, but as I told you, Brana had already finished the middle education, which at that time, in a small town in Europe, was not so easy. Mina seems not to have finished school, however.
+
+As I told you, I know that Brana had finished what was called the gymnasium. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(680); return false;">0:11:20</a>
+Yes, Goyo tells me that his memory of Brana is of a woman who was always reading, that's what he told me.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(807); return false;">0:13:27</a>
+Maybe, I don't remember, but it could be.
+
+<span class="speaker-eric">Eric</span>
+And Ester, she had like, she had like, even though she didn't complete a formal education, formal communication? Like she was, of course, very intelligent and skilled, and she also read and was interested in things like that, or more than anything, she only had time to try to start her business?
+
+<span class="speaker-rosita">Rosita</span>
+Yes, no, no, the truth is that I could not say that she read badly, no, I think not. But as I tell you, she spoke and wrote in Russian, now she never learned to speak Spanish well. But she  wrote in Spanish too, but badly. But ... I wouldn't say my mom had intellectual interests. But she was a very intelligent woman.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(857); return false;">0:14:17</a>
+Yes, for sure. With how much she achieved, it's incredible. 
+Do you remember if she hung out with Russian friends
+or friends to speak Yiddish or Russian?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(877); return false;">0:14:37</a>
+Yes, she...
+Yes, she had a friend, a Russian friend, ... of surname Braylovsky. Yeah. And this lady, this lady, whoo, what is that?
+had a son, uh, his name was, I don't remember at this moment, He went to Boston with his family.
+He married a Jewish girl, from a Jewish-German family, here in Santiago. And also, because of the U.P. (Allende's party), they went to the United States.
+
+<span class="speaker-eric">Eric</span>
+<div id="section-10" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(962); return false;">0:16:02</a>
+Ah.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(962); return false;">0:16:02</a>
+And he was a pretty well-known cardiologist here in Santiago. And, the truth is I don't know, but it seems that he was there too. And they had three daughters. And one of them, she was a rabbi. 
+
+<span class="speaker-eric">Eric</span>
+Ah, in Boston? 
+
+<span class="speaker-rosita">Rosita</span>
+In Boston. I don't know if the other two are doctors, I'm not sure. These were a Jewish family that for some reason, I don't know how, went to China. 
+
+<span class="speaker-eric">Eric</span>
+During the war. 
+
+<span class="speaker-rosita">Rosita</span>
+During the war, yes. Wow, so... They went to China.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1011); return false;">0:16:51</a>
+So the friend of the Esther had lived in China for a few years.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1017); return false;">0:16:57</a>
+Yes, she had lived in China for a few years. And, well, this friend had a sister, a family, I don't know. But the closest friend is this one I told you about. Hello. The mother of this doctor, David.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1019); return false;">0:16:59</a>
+David Brailovsky. David. The doctor's name is David?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1037); return false;">0:17:17</a>
+If you look for him, surely. David Braylovski in Boston, I think you'll find him.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1044); return false;">0:17:24</a>
+Braylocki?
+
+6
+<a href="#" class="timestamp" onclick="jumpToTime(1045); return false;">0:17:25</a>
+This lady was very... Braylovsky.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1049); return false;">0:17:29</a>
+So like B-R-A-I-L-O-V-S-K-Y, something like that?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1060); return false;">0:17:40</a>
+Yes, I don't know if it's V short or W.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1062); return false;">0:17:42</a>
+Ah, I found him!
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1063); return false;">0:17:43</a>
+You found him?
+Braylovski.
+So, his... The mother of this guy...
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1068); return false;">0:17:48</a>
+David. Yes, I found it here. It seems that he died in Massachusetts two years ago.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1076); return false;">0:17:56</a>
+Ah, he died.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1078); return false;">0:17:58</a>
+Ah, he died, David.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1080); return false;">0:18:00</a>
+It says that his wife's name was Renata Schnitzer.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1085); return false;">0:18:05</a>
+Yes, exactly. She has a brother who lives in Chile. 
+
+<span class="speaker-eric">Eric</span>
+Do you remember what his mother's name was? Ester's friend? 
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1102); return false;">0:18:22</a>
+Zina, the first letter.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1105); return false;">0:18:25</a>
+A Z.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1132); return false;">0:18:52</a>
+Zina.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1133); return false;">0:18:53</a>
+Zina.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1134); return false;">0:18:54</a>
+You know, like, let's see, what is it?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1136); return false;">0:18:56</a>
+Like New Zealand. 
+
+<span class="speaker-eric">Eric</span>
+Here comes Nicole.
+
+
+<span class="speaker-rosita">Rosita</span>
+Hello, Nicole, how are you? 
+
+Nicole
+I am... today I am fine. Yesterday I wasn't so good.
+I had to move. I had to move from the apartment yesterday because there was a crazy woman who lived... <cut away>
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1173); return false;">0:19:33</a>
+...But if you are tired, just tell me.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1176); return false;">0:19:36</a>
+Hey, well, it seems like you have progressed a lot of progress. Tell me, have you found out anything else about the Greibers?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1184); return false;">0:19:44</a>
+No, I haven't found out anything about the Greibers. I would love to talk to them.
+
+<span class="speaker-rosita">Rosita</span>:
+Well there are several in Brazil, maybe you can talk to one of them if Marita gives you more information, and you can start following that thread...
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1222); return false;">0:20:22</a>
+So, you have told me a lot of things, and Marita just called me in the middle,
+just when the call was cut off,
+and I told her that I was talking to you,
+and that I would call you later to tell her about your discoveries. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1250); return false;">0:20:50</a>
+One more question, do you remember anything about your dad or how he was? Or were you too young?
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-11" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(1265); return false;">0:21:05</a>
+How was he? Look, I remember he was tall, but since I was a girl, I don't know if it's true or if it was just because he of course was so much bigger than me? But apart from that, I also remember, speaking of anecdotes, that I think I hurt my foot, and I remember him calming me down and helping me to heal the wound. But that's about it. I don't remember much else about him. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1305); return false;">0:21:45</a>
+One thing you told me when we talked a few years ago was that he had just built a beautiful house made of marble with a large staircase and that the house had --
+
+<span class="speaker-rosita">Rosita</span>:
+No, he didn't have it built or anything. That house, we had rented it recently. The family, that is. My father and my mother had rented it. It was on the other side of the factory street, on the same street. On the same street, because previously, we had live in a room directly in the back of the factory.
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-12" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(1341); return false;">0:22:21</a>
+The factory was there, the business was on the street. The business where the fabrics were sold, the factory next door, I don't know. And behind that was a room where the family lived, my father my mother my brother and I.
+
+And just before the earthquake happened, maybe 6 months or so, we had moved to a very beautiful house on the other side of the street, a house that was on a second floor and that had a marble staircase and marble floors. And in that house my father died.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1383); return false;">0:23:03</a>
+And the house was... 
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1389); return false;">0:23:09</a>
+It was a house that we had rented.
+It was not our own. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1395); return false;">0:23:15</a>
+And the house was completely destroyed.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1397); return false;">0:23:17</a>
+Yes, but I didn't see her because I told you that we were in a nearby resort.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1402); return false;">0:23:22</a>
+And I'm sure you didn't go back.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1405); return false;">0:23:25</a>
+Maybe my mom went back to see if there was anything to rescue her. But I don't remember.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1425); return false;">0:23:45</a>
+That must have been so traumatic for your mom.
+
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1423); return false;">0:23:43</a>
+Yes, but no. But some things must have been taken to Santiago, because I remember there was a dining set from that house that we also took to Santiago. I remember there was a living room with a marble floor and a combination of black and white. The staircase was made of marble and the living room.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1468); return false;">0:24:28</a>
+There was probably a house on the first floor, I can't tell you, I don't remember... But I know that to get to our house there was a white marble staircase. And there you would get to a large landing, which was also with marble floor, and from there you'd access the different rooms 
+
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1490); return false;">0:24:50</a>
+Do you remember anything about the school you went to in Puerto Montt, Talcahuana? 
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-13" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(1500); return false;">0:25:00</a>
+No, I know that in Concepción I went to a school called Concepción College.
+Because I actually went there until I was 8 years old, so I should remember more. But I remember vaguely, like for a few years I remembered a friend I had in school, but the truth is that it has been erased. And I know that I also was enrolled in piano lessons, but for that it seems that I did not have any ability on the piano. 
+
+
+<img src="images/ester_rosita_nano_1941_valparaiso.png" alt="Ester child" width="600">
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1529); return false;">0:25:29</a>
+So that no longer continued when you arrived in Santiago?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1533); return false;">0:25:33</a>
+No, ademas, bueno, se terminó todo por distintas razones.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1538); return false;">0:25:38</a>
+Pero, eh, el de... Y aquí no, tampoco fui a un colegio... a un colegio donde enseñaran especialmente el inglés, pero tuve unas profesoras más o menos buenas en el liceo y, bueno, y siempre traté de mejorar un poco mi inglés. I'm trying to improve my English a little bit.
+In the written part, I'm not that bad. In the spoken part, my ear is not used to it.
+
+<span class="speaker-eric">Eric</span>
+<div id="section-14" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(1578); return false;">0:26:18</a>
+Yes, I think that part is difficult without having lived somewhere. Well, I took German for three years. I understand to read, but I don't understand anything when I hear it.
+
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1593); return false;">0:26:33</a>
+Yes, so look, as I tell you, I remember suddenly, I know I remembered the doctor who attended us, but they were already in some very hidden recess.
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-15" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(1635); return false;">0:27:15</a>
+Yes, before there was a Jewish congressman.
+who was from a family of conception and his name was Natalio Berman. Natalio Berman
+B... Berman
+Berman. B from Brazil, then E like Esther, and then R like Rosa.
+
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1675); return false;">0:27:55</a>
+And he had an amputated leg. Why do I remember? I don't know.
+I don't know if it was an accident. I really don't remember.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1697); return false;">0:28:17</a>
+And he had a sister who was a doctor. Her name was Luisa. Luisa Berman. She was a friend of my mother. Natalio Berman, ah, interesting.
+
+<span class="speaker-eric">Eric</span>
+Natalio Berman has a Wikipedia, a Wikipedia page.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1706); return false;">0:28:26</a>
+He is on Wikipedia, look. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1730); return false;">0:28:50</a>
+He is on Wikipedia and they say he was a surgeon and communist politician, Russian-Jewish, Chilean. He was a doctor too, I didn't remember that. And he says, Luisa Cohen-Reyer.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1726); return false;">0:28:46</a>
+Luisa was a doctor too.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1728); return false;">0:28:48</a>
+It seems. Ah, he was a communist, Natalio.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1731); return false;">0:28:51</a>
+And you remember knowing him?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1734); return false;">0:28:54</a>
+Yes.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1735); return false;">0:28:55</a>
+He was a friend of your parents?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1738); return false;">0:28:58</a>
+Yes.
+And Luisa was married
+to a pharmacist.
+I don't remember the last name.
+They had a drugstore, like a pharmacy, where they sell chemical products.
+I don't remember the name of the husband. 
+
+<span class="speaker-eric">Eric</span>
+It could have been the woman named Luisa. Luisa is Natalio's sister. Interesting. Wow. So there was a big Jewish community in Concepción. Not as big as in Santiago, but big enough.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1776); return false;">0:29:36</a>
+Yes. And Nano maintained contact with some people from there who then moved to Santiago. Marita can maybe tell you some of the names.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1778); return false;">0:29:38</a>
+Well, I don't want to prevent you from talking to Marita, so I'm sure we'll talk soon. But thank you for telling me so much about the past. Really, every detail is interesting, so thank you. 
+
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1840); return false;">0:30:40</a>
+No, for me too.
+And the truth is that when I talk to you, I remember things that I hadn't thought of in a thousand years
+And they appear in my memory.
+How is the situation with the virus?
+
+<span class="speaker-rosita">Rosita</span>
+<div id="section-16" class="section-anchor"></div>
+<a href="#" class="timestamp" onclick="jumpToTime(1860); return false;">0:31:00</a>
+In San Diego, in the United States I know, in New York I also know But how are you?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1870); return false;">0:31:10</a>
+in San Diego we have only 3,000 cases and 100 deaths. So it's not really serious. But the truth is that the beaches have just opened and I think it was a bit...
+Well, anyway I'm going to go surfing because I've been missing it. But I think it was a little... How do you say it? Premature?
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1900); return false;">0:31:40</a>
+Premature.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1902); return false;">0:31:42</a>
+A little premature, because a lot of people took the fact that the beaches were open as an indication that the situation is safer than it is. So I see in my block that there are a lot of people with friends and organizing parties. I think people are not taking it seriously enough.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1925); return false;">0:32:05</a>
+Well, but you take it seriously then, huh? Take it seriously and keep trying to wear a mask when you're as an agent.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1934); return false;">0:32:14</a>
+Yes, I have a mask, so every time I go shopping, well, the truth is that every time I go shopping, I buy food that lasts for two weeks, so it ends up being very expensive.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1948); return false;">0:32:28</a>
+And it's also important that you use some disinfectant mixture on the surfaces of the kitchen furniture, the bathroom furniture, the phones, those things. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1970); return false;">0:32:50</a>
+Yes, the truth is that I haven't put gas in my car because it's not worth it to run the risk of touching the handles.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(1990); return false;">0:33:10</a>
+But you can put on any pair of gloves.
+Anyway, buy a few plastic gloves. You should have them in the lab. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2005); return false;">0:33:25</a>
+Yes, so I haven't left the house much, but...
+That's why it's been fun to have several projects. My tomatoes are growing, just like my peppers.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2023); return false;">0:33:43</a>
+Jocelyn also has an orchard with tomatoes, peppers...
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2030); return false;">0:33:50</a>
+Yes I spoke with her last week about it.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2038); return false;">0:33:58</a>
+I'm going to tell you that every tomato in your garden is worth like 5 tomatoes in the supermarket.
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2047); return false;">0:34:07</a>
+We'll see, if society is destroyed and we end up living in a kind of anarchy, then it will be good to have your own tomatoes. And then they will definitely be worth more. 
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2060); return false;">0:34:20</a>
+There they will be worth more, yes. Let's hope not. Let's not be dramatic 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2070); return false;">0:34:30</a>
+Also, I've eaten thousands of paltas in my life, and I never thought of planting the pit.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2078); return false;">0:34:38</a>
+Thought of what?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2080); return false;">0:34:40</a>
+That I never thought of planting the pit.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2084); return false;">0:34:44</a>
+Think of what?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2086); return false;">0:34:46</a>
+Of planting it. My roommate planted the pit of an avocado in September when we had just arrived and now, well, the truth is that it took about 5 months to get a root out of it I was going to say, but these last two months it has become a little tree.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2117); return false;">0:35:17</a>
+Wow, wow. And what fruit is it?
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2119); return false;">0:35:19</a>
+Palta.
+It's very cool.
+Well, it seems that it takes about four or five years to bear fruit. So he wanted to plant a tree so that when he finished his PhD he would have several plants. 
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2140); return false;">0:35:40</a>
+But you're going to need to buy a piece of garden. 
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2150); return false;">0:35:50</a>
+Yes, and in fact I'm thinking of buying a house here in San Diego because I'm going to be here for at least 5 years. And San Diego is a beautiful place and I think it's worth it to stop renting and maybe try to buy a house. Let's see. I'm going to start looking for this summer because I think that the prices will be lower because of the market downturn.
+
+<span class="speaker-rosita">Rosita</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2170); return false;">0:36:10</a>
+Because of the virus?
+
+
+<span class="speaker-eric">Eric</span>
+<a href="#" class="timestamp" onclick="jumpToTime(2160); return false;">0:36:00</a>
+Yes, exactly. So let's see.
+
+            </pre>
+        </div>
+    </div>
+    <script>
+        // Function to jump the audio player to a specified time (in seconds)
+        function jumpToTime(seconds) {
+            var audio = document.getElementById("audioPlayer");
+            audio.currentTime = seconds;
+            audio.play();
+        }
+        // Function to jump both the audio and scroll the transcript container to the specified section
+        function jumpToSection(sectionId, seconds) {
+            jumpToTime(seconds);
+            var container = document.getElementById("transcript-container");
+            var target = document.getElementById(sectionId);
+            if (target) {
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        }
+    </script>
+</body>
+</html>

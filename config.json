@@ -1,0 +1,53 @@
+{
+  "RositaInterview4_29_20-11_17_23": {
+    "page_id": "RositaInterview4_29_20-11_17_23",
+    "transcript_file": "transcripts/RositaInterview4_29_20-11_17_23_English.txt",
+    "spanish_transcript_file": "transcripts/RositaInterview4_29_20-11_17_23.txt",
+    "audio_file": "audio/RositaInterview4_29_20-11_17_23.mp3",
+    "output_file": "RositaInterview4_29_20-11_17_23.html",
+    "page_title": "Rosita Interview - 4/29/20 (Interview 1)"
+  },
+  "RositaInterview4_11_20-4_11_20": {
+    "page_id": "RositaInterview4_11_20-4_11_20",
+    "transcript_file": "transcripts/RositaInterview4_11_20-4_11_20_English.txt",
+    "spanish_transcript_file": "transcripts/RositaInterview4_11_20-4_11_20.txt",
+    "audio_file": "audio/RositaInterview4_11_20-4_11_20.mp3",
+    "output_file": "RositaInterview4_11_20-4_11_20.html",
+    "page_title": "Rosita Interview - 4/11/20 (Interview 2)"
+  },
+  "MaritaInterview5_4_20": {
+    "page_id": "MaritaInterview5_4_20",
+    "spanish_transcript_file": "transcripts/MaritaInterview5_4_20.txt",
+    "audio_file": "audio/MaritaInterview5_4_20.mp3",
+    "output_file": "MaritaInterview5_4_20.html",
+    "page_title": "Marita: Memories of Ester and Jewish Life"
+  },
+  "MaritaInterview5_15_20_pinochet": {
+    "page_id": "MaritaInterview5_15_20_pinochet",
+    "spanish_transcript_file": "transcripts/MaritaInterview5_15_20_pinochet.txt",
+    "audio_file": "audio/MaritaInterview5_15_20_pinochet.mp3",
+    "output_file": "MaritaInterview5_15_20_pinochet.html",
+    "page_title": "Marita: Memories Around Allende and Pinochet"
+  },
+  "JaimeKoifmanInterview5_28_20": {
+    "page_id": "JaimeKoifmanInterview5_28_20",
+    "spanish_transcript_file": "transcripts/JaimeKoifmanInterview5_28_20.txt",
+    "audio_file": "audio/JaimeKoifmanInterview5_28_20.mp3",
+    "output_file": "JaimeKoifmanInterview5_28_20.html",
+    "page_title": "Jaime Koifman: Early Koifman Family Memories and History"
+  },
+  "RubyJaimeInterview4_24_20": {
+    "page_id": "RubyJaimeInterview4_24_20",
+    "spanish_transcript_file": "transcripts/RubyJaimeInterview4_24_20.txt",
+    "audio_file": "audio/RubyJaimeInterview4_24_20.mp3",
+    "output_file": "RubyJaimeInterview4_24_20.html",
+    "page_title": "Ruby and Jaime: Aron Jaikles and Early Memories"
+  },
+  "LaliInterview4_19_20": {
+    "page_id": "LaliInterview4_19_20",
+    "spanish_transcript_file": "transcripts/LaliInterview4_19_20.txt",
+    "audio_file": "audio/LaliInterview4_19_20.mp3",
+    "output_file": "LaliInterview4_19_20.html",
+    "page_title": "Lali: Memories of Brana and Jaiklis Family History"
+  }
+}
