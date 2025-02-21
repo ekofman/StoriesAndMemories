@@ -170,23 +170,21 @@ audio {{
   max-width: 100%;
   object-fit: contain;
 }}
-#image-container button {{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+#buttons {{
+  text-align: center;
+  margin-bottom: 2px;
+}}
+
+#buttons button {{
+  display: inline-block;
   background-color: rgba(255, 255, 255, 0.8);
   border: none;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.2em;
   color: #007acc;
-  padding: 5px 10px;
+  padding: 2px 5px;
   transition: background-color 0.3s, color 0.3s;
-}}
-#prev-image {{
-  left: 10px;
-}}
-#next-image {{
-  right: 10px;
+  margin: 0 2px;
 }}
 #image-container button:hover {{
   background-color: rgba(150, 150, 150, 0.8);
@@ -198,7 +196,7 @@ audio {{
 }}
 #image-subtitle {{
   margin-top: 10px;
-  font-size: 1.1em;
+  font-size: .7em;
   color: #555;
   text-align: center;
 }}
@@ -308,11 +306,13 @@ audio {{
     <div id="main-container">
         <!-- Left Column: Image (upper half) and TOC (lower half) -->
         <div id="left-column">
+	    <div id="buttons">
+   	    	<button id="prev-image" onclick="prevImage()">&#9664;</button>
+            	<button id="next-image" onclick="nextImage()">&#9654;</button>
+	    </div>
             <div id="image-subtitle"></div>
             <div id="image-container">
-                <button id="prev-image" onclick="prevImage()">&#9664;</button>
                 <img id="current-image" src="" alt="Image">
-                <button id="next-image" onclick="nextImage()">&#9654;</button>
             </div>
             <div id="toc-title">
                 <h2>Table of Contents</h2>
