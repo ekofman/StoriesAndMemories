@@ -171,6 +171,7 @@ audio {{
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
+  padding-bottom: 2px;
 }}
 #image-container img {{
   max-height: 100%;
@@ -207,12 +208,18 @@ audio {{
   text-align: center;
 }}
 
+#toc-title {{
+  font-size: 0.7em;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+
+}}
+
 /* TOC Container (lower 45%) */
 #toc-container {{
   height: 45%;
   overflow-y: auto;
-  background-color: #fafafa;
-  border-top: 1px solid #e0e0e0;
+  background-color: #ffffff;
   padding: 10px;
 }}
 #toc-container h2 {{
