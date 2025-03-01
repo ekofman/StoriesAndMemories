@@ -56,6 +56,7 @@ def process_transcript(file_path, main_points_list):
     processed = "".join(output_lines)
     # Wrap speaker names
     processed = re.sub(r"^(Rosita)", r'<span class="speaker-rosita">\1</span>', processed, flags=re.MULTILINE)
+    processed = re.sub(r"^(Jaime)", r'<span class="speaker-jaime">\1</span>', processed, flags=re.MULTILINE)
     processed = re.sub(r"^(Eric)", r'<span class="speaker-eric">\1</span>', processed, flags=re.MULTILINE)
     # Make timestamp-only lines clickable
     def timestamp_link(match):
@@ -282,6 +283,11 @@ audio {{
   margin-top: -60px;
 }}
 
+/* Speaker Name Styling */
+.speaker-jaime {{
+  color: #ff7a00;
+  font-weight: bold;
+}}
 /* Speaker Name Styling */
 .speaker-rosita {{
   color: #007acc;
