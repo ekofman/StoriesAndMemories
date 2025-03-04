@@ -1,22 +1,15 @@
 [
     {
       "id": "section-1",
-      "title": "Arrival in Santiago and Initial Impressions",
+      "title": "1939: Arrival in Santiago after the Earthquake",
       "subtitle": "We arrived in Santiago, my mother, my brother and I, in January of 1939.",
       "start_time": 0,
       "display_time": "0:00:00",
       "image": "Valparaiso"
     },
     {
-      "id": "section-2",
-      "title": "Immediate Post‐Earthquake Reaction",
-      "subtitle": "Eric asks, 'Right after the earthquake?' and Rosita replies, 'After the earthquake.'",
-      "start_time": 9,
-      "display_time": "0:00:09"
-    },
-    {
       "id": "section-3",
-      "title": "Ship Arrival and Family Reunion",
+      "title": "1939: Ship Arrival and Family Reunion",
       "subtitle": "Rosita explains that the ship arrived carrying her mother's two sisters, her uncle Fabel, and Chelis’s family.",
       "start_time": 13,
       "display_time": "0:00:13",
@@ -24,53 +17,45 @@
     },
     {
       "id": "section-4",
-      "title": "Family Gatherings and Economic Conditions",
+      "title": "Family Reunions in Santiago",
       "subtitle": "Family meetings were frequent and everyone was poorer (no cars).",
       "start_time": 52,
       "display_time": "0:00:52"
     },
     {
       "id": "section-5",
-      "title": "Neighborhood Living in Santiago",
+      "title": "The entire family lived in one neighborhood in Santiago",
       "subtitle": "Everyone lived 6–8 blocks apart; no family had a car.",
-      "start_time": 85,
-      "display_time": "0:01:25"
+      "start_time": 96,
+      "display_time": "0:01:37"
     },
     {
       "id": "section-6",
-      "title": "Traumatic Transfer from Concepción to Santiago",
+      "title": "The transfer from Conception to Santiago: help from Jaime Motlis",
       "subtitle": "Rosita mentions the traumatic transfer from Concepción to Santiago following the earthquake.",
-      "start_time": 125,
-      "display_time": "0:02:05"
-    },
-    {
-      "id": "section-7",
-      "title": "Family Details: Bine and Jaime Motlis",
-      "subtitle": "She refers to a cousin (son of 'the VINE') and to Jaime Motlis, a government doctor.",
-      "start_time": 155,
-      "display_time": "0:02:35",
-      "image": "jaime_motlis"
+      "start_time": 137,
+      "display_time": "0:02:17"
     },
     {
       "id": "section-8",
       "title": "Train Transportation Across Chile",
       "subtitle": "Travel was mostly by train due to few cars and paved roads.",
-      "start_time": 209,
-      "display_time": "0:03:29"
+      "start_time": 221,
+      "display_time": "0:03:41"
     },
     {
       "id": "section-9",
       "title": "Living Arrangements: Big Houses and Mixed Emotions",
       "subtitle": "Rosita recounts living in large houses with extended family, with mixed feelings.",
-      "start_time": 246,
-      "display_time": "0:04:06"
+      "start_time": 261,
+      "display_time": "0:04:21"
     },
     {
       "id": "section-10",
       "title": "Newcomers (‘Grines’) and Community Impressions",
       "subtitle": "She explains that the 'grines' (gringos) fresh off the boat became a local talking point.",
-      "start_time": 330,
-      "display_time": "0:05:30"
+      "start_time": 334,
+      "display_time": "0:05:34"
     },
     {
       "id": "section-11",
@@ -81,17 +66,10 @@
     },
     {
       "id": "section-12",
-      "title": "Earthquake Memories and the Pool House ‘Penco’",
+      "title": "Earthquake Memories: sleeping in tents at the Penco beachside resort",
       "subtitle": "She remembers the January earthquake and sleeping in tents at a pool house called 'Penco.'",
-      "start_time": 440,
-      "display_time": "0:07:20"
-    },
-    {
-      "id": "section-13",
-      "title": "Reconstruction and Adobe Collapse",
-      "subtitle": "Rosita describes cracks, ditches, and wonders about a tsunami in Pucon; she references the 1939 earthquake.",
-      "start_time": 501,
-      "display_time": "0:08:21"
+      "start_time": 448,
+      "display_time": "0:07:28"
     },
     {
       "id": "section-14",
@@ -111,8 +89,8 @@
       "id": "section-16",
       "title": "Cultural Landmarks: Synagogue and Rosh Hashanah",
       "subtitle": "She mentions a synagogue that was sold and installed in a church and recalls a Rosh Hashanah ceremony.",
-      "start_time": 728,
-      "display_time": "0:12:08"
+      "start_time": 699,
+      "display_time": "0:11:39"
     },
     {
       "id": "section-17",
