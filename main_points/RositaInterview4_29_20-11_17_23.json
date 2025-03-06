@@ -23,13 +23,15 @@
       "id": "section-4",
       "title": "The Vicuña Mackenna Building: Home first to Brana and Simon, then to León’s Parents",
       "start_time": 304,
-      "display_time": "0:05:04"
+      "display_time": "0:05:04",
+      "image": "santiago_1930"
     },
     {
       "id": "section-5",
       "title": "Religious Practices and Abram’s Devotion in the Family",
       "start_time": 370,
-      "display_time": "0:06:10"
+      "display_time": "0:06:10",
+	"image": "baby_leon_with_parents"
     },
     {
       "id": "section-6",
@@ -39,16 +41,17 @@
       "image": "young_ester"
     },
     {
-      "id": "section-6",
+      "id": "section-7",
       "title": "The Importance of Education in Ester's Family",
-      "start_time": 673,
-      "display_time": "0:11:43"
+      "start_time": 703,
+      "display_time": "0:11:43",
+	"image": "sara_and_ruben"
     },
     {
       "id": "section-10",
-      "title": "International Connections and Memories of David Braylovsky",
-      "start_time": 961,
-      "display_time": "0:16:01"
+      "title": "Ester's best friend: Zina Brailovsky, whose son ended up in Boston",
+      "start_time": 876,
+      "display_time": "0:14:36"
     },
     {
       "id": "section-11",
@@ -59,12 +62,13 @@
     {
       "id": "section-12",
       "title": "The Marble House, Earthquake, and Family Tragedy",
-      "start_time": 1341,
-      "display_time": "0:22:21"
+      "start_time": 1298,
+      "display_time": "0:21:38",
+	"image": "chillan_earthquake"
     },
     {
       "id": "section-13",
-      "title": "School Memories and Early Friendships in Concepción",
+      "title": "Early memories in Concepción",
       "start_time": 1500,
       "display_time": "0:25:00",
       "image": "Valparaiso"
@@ -78,11 +82,20 @@
     {
       "id": "section-15",
       "title": "Natalio Berman, Communist Congressman and Friend of José's",
-      "start_time": 1635,
-      "display_time": "0:27:15"
+      "start_time": 1631,
+      "display_time": "0:27:11",
+	"image": "natalio_berman"
     },
     {
       "id": "section-16",
+      "title": "Dr. Luisa Berman, Natalio's sister, friend of Ester",
+      "start_time": 1631,
+      "display_time": "0:27:11",
+	"image": "natalio_berman"
+
+    },
+    {
+      "id": "section-17",
       "title": "Observations on the Early Pandemic",
       "start_time": 1860,
       "display_time": "0:31:00"

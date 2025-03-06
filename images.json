@@ -5,7 +5,7 @@
   },
   "boarding_lisbon": {
     "src": "images/boarding_in_lisbon.png",
-    "textContent": "Escaping Through Lisbon, 1939. Brana and Mina are the two young women in the third row from the front. Favel and Mane Haichelis are the couple at the top of the steps. Nune Haichelis is in the front next to the child. In the second row from the front, Gregorio is on the very left and Miguel is on the very right. Thank you to Miguel Haichelis for annotations and to Lali and Oswaldo for providing the photo."
+    "textContent": "Escaping Through Lisbon, 1939. Brana and Mina are the two young women in the third row from the front. Favel and Mane Haichelis are the couple at the top of the steps. Nune Haichelis is in the front by the child. In the second row from the front, Gregorio is on the very left and Miguel is on the very right."
   },
   "Sprintze_Jaikles": {
     "src": "images/Sprintze_Jaikles.jpg",
@@ -62,5 +62,21 @@
  "baby_leon_with_parents": {
    "src": "images/baby_leon_with_parents.png",
    "textContent": "Leon Koifman as a child with Abram Koifman and Lea Serber (1929?)"
+ },
+ "natalio_berman": {
+   "src": "images/Natalio_Berman.jpeg",
+   "textContent": "Natalio Berman (1908-1957), Médico cirujano, salubrista, escritor y político de la Nueva Acción Pública, del Partido Socialista de Chile, del Partido Socialista de Trabajadores y del Partido Comunista de Chile."
+ },
+ "chillan_earthquake": {
+   "src": "images/chillan_earthquake.jpeg",
+   "textContent": "Chillan Earthquake, 1939"
+ },
+"sara_and_ruben": {
+   "src": "images/sara_and_ruben.jpeg",
+   "textContent": "Sarah, Ruben, Gregorio and Ester (~1912)"
+ },
+"santiago_1930": {
+   "src": "images/santiago_1930.jpeg",
+   "textContent": "Santiago in 1930 (https://upload.wikimedia.org/wikipedia/commons/8/8b/Santiago_de_Chile_1930.jpg)"
  }
 }
