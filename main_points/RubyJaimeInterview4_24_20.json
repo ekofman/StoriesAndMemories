@@ -1,1 +1,24 @@
-[]
+[
+    {
+      "id": "section-1",
+      "title": "Aron Jaikles, the first to arrive in Chile, and early member of the Jewish community",
+      "start_time": 119,
+      "display_time": "0:01:59",
+      "image": "union_israelita"
+    },
+    {
+      "id": "section-2",
+      "title": "Aron would play Telefunken with his grandchildren and would cheat and laugh uncontrollably when he beat them and took their money",
+      "start_time": 127,
+      "display_time": "0:02:07",
+      "image": "union_israelita"
+    },
+    {
+      "id": "section-3",
+      "title": "Aron told the story that wooed his wife by lying to her that he was a millionaire",
+      "start_time": 285,
+      "display_time": "0:04:45",
+      "image": "union_israelita"
+    }
+
+]

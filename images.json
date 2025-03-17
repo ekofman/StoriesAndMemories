@@ -29,11 +29,15 @@
   },
   "family_reunion": {
     "src": "images/Chile_Family_Reunion.JPG",
-    "textContent": "A family reunion, circa 1954. This was Uli and Mina Chazanas 10th wedding anniversary; they are seated at the very front with their two boys Gregorio (Goyo) and Alex. Brana is seated next to them at the right end of that first small row, and her husband stands behind her in the glasses. Leon and Rosita are the tall couple in the back row, Leon’s parents Abram Koifman and Lea Serber are the couple right behind the man with the crossed arms, and Ester Vugman Greiber sits next to this man on his right. Thank you to Goyo Chazanas for the photo."
+    "textContent": "A family reunion, circa 1954. This was Uli and Mina Chazanas 10th wedding anniversary; they are seated at the very front with their two boys Gregorio (Goyo) and Alex. Brana is seated next to them at the right end of that first small row, and her husband stands behind her in the glasses. Leon and Rosita are the tall couple in the back row, Leon’s parents Abram Koifman and Lea (Leike) Serber are the couple right behind the man with the crossed arms, and Ester Vugman Greiber sits next to this man on his right. Thank you to Goyo Chazanas for the photo."
   },
   "jaikles_ladies": {
     "src": "images/jaikles_ladies.jpg",
     "textContent": "Family Reunion. Seated: Sarita Jaikles (Gomberoff), Clara Motlis (Gottlieb), Jenny Fassler (Cosidoy), Ester Vugman (Greiber), Zulema Jaikles (Haichelis) \n  Standing: Brana Vugman (Bergstein), Betty Jaikles (Link), Paulina Fassler (Icekson), Olga Kusnir (Dubinosky), Mina Vugman (Chazanas), Maruca Fassler (Levy) (?)"
+ },
+ "ester_mina_brana_reunion": {
+ "src": "images/ester_mina_brana_reunion.JPG",
+   "textContent": "Ester, Mina, Brana and their husbands."
  },
  "jaime_motlis": {
    "src": "images/jaime_motlis.png",
@@ -47,13 +51,37 @@
    "src": "images/vugmangrave.jpeg",
    "textContent": "Ruben and Sara's Grave in Orhei/Orgeyev. It is unclear where and when exactly they died. This grave may have been erected after Mari returned to Orgeyev from Tbilisi after the war."
  },
+ "elias_greibrer_id": {
+   "src": "images/elias_greiber_id.png",
+   "textContent": "Elias Greiber, father of Jose Greiber (Hernan and Rosa Greiber's grandfather). Elias Greiber’s ID card in Belem, Brazil. Born 12/20/1874, white skin, blue eyes, white hair, male pattern baldness. A “cavaignac” might be a reference to the type of mustache he sported, as hinted by Victor Hugo’s description of 1848-revolution era French General Louis-Eugène Cavaignac. His father Lazer’s birth was recorded as taking place in Mohyliv-Podilskyi in 1844, as found on JewishGen."
+ },
+ "clara_chocler_greiber_id": {
+   "src": "images/clara_chocler_greiber_id.png",
+   "textContent": "Clara Chocler Greiber, mother of Jose Greiber (Hernan and Rosa Greiber's grandmother). Clara Chocler Greiber’s Passport, registering her journey back to Brazil through Argentina from visiting Jose and Ester in Concepcion for two months. Light brown eyes, dark brown hair, greying. She was born in Zguriţa, Moldova, which is only about an hour from Mohyliv."
+ },
  "rosita_greiber_young": {
    "src": "images/rosita_greiber_young.png",
    "textContent": "Rosita Greiber."
  },
+  "rosita_nano_as_children": {
+   "src": "images/rosita_nano_as_children.png",
+   "textContent": "Rosa (Rosita) and Hernan (Nano) Greiber as children (~1935). This photo would have been taken in Concepcion."
+ },
+  "nano_marita_leon_rosita": {
+   "src": "images/nano_marita_leon_rosita.png",
+   "textContent": "A night out (~1962?). From left to right: Hernan (Nano) Greiber, Gregorio (Goyo) Chazanas, Mina Vugman Chazanas, Uli Chazanas, possibly Marita, possibly Alex Chazanas, Ester Vugman, Rosa (Rosita) Koifman Greiber, Leon Koifman"
+ },
  "rosita_leon_wedding": {
    "src": "images/rosita_leon_wedding.png",
    "textContent": "Rosita Greiber and Leon Koifman's Wedding, 1955"
+ },
+ "young_koifman_parents": {
+   "src": "images/young_koifman_parents.png",
+   "textContent": "Leon and Rosita Koifman as young parents (~1956-57). Leon and Rosita Koifman and two of their three children."
+ },
+ "koifman_family_outing": {
+   "src": "images/koifman_family_outing.png",
+   "textContent": "Koifman family (~1966). Leon and Rosita Koifman and their three children, Jose-Luis, Roberto and Jocelyn."
  },
  "harry_fassler_and_cecilia_young": {
    "src": "images/harry_fassler_and_cecilia_young.png",
@@ -65,7 +93,7 @@
  },
  "natalio_berman": {
    "src": "images/Natalio_Berman.jpeg",
-   "textContent": "Natalio Berman (1908-1957), Médico cirujano, salubrista, escritor y político de la Nueva Acción Pública, del Partido Socialista de Chile, del Partido Socialista de Trabajadores y del Partido Comunista de Chile."
+   "textContent": "Natalio Berman (1908-1957). Médico cirujano, salubrista, escritor y político de la Nueva Acción Pública, del Partido Socialista de Chile, del Partido Socialista de Trabajadores y del Partido Comunista de Chile."
  },
  "chillan_earthquake": {
    "src": "images/chillan_earthquake.jpeg",
@@ -75,8 +103,28 @@
    "src": "images/sara_and_ruben.jpeg",
    "textContent": "Sarah, Ruben, Gregorio and Ester (~1912)"
  },
+ "union_israelita": {
+   "src": "images/union_israelita.png",
+   "textContent": "Documents from the founding of La Union Israelita en Chile, August 8th, 1909. Aron Jaikles is visible on the first column of the second page. Miguel Berdichevski, who Jaime Motlis had remembered as figuring prominently in the story of Aron’s arrival, is listed on the second column of the first page."
+},
 "santiago_1930": {
    "src": "images/santiago_1930.jpeg",
    "textContent": "Santiago in 1930 (https://upload.wikimedia.org/wikipedia/commons/8/8b/Santiago_de_Chile_1930.jpg)"
- }
+ },
+"isla_dawson": {
+   "src": "images/isla_dawson_lawner_drawing.png",
+   "textContent": "Drawing of Isla Dawson. The architect Miguel Lawner was imprisoned at isla Dawson, and sketched from memory a series of drawings depicting the detention center and concentration camp at which he was held."
+ },
+ "alberto_spoerer": {
+    "src": "images/alberto_spoerer.png",
+    "textContent": "Persecution of doctors sympathetic to Allende, 1974. This times clipping demonstrates the extent to which the new Pinochet government persecuted anybody perceived to have contributed to the 'Marxist' cause"
+ },
+ "estadio_nacional": {
+    "src": "images/estadio_nacional.png",
+    "textContent": "Estadio Nacional, 1973. Political prisoners supervised by military guards in the stadium after the coup."
+  },
+ "estadio_nacional_students": {
+    "src": "images/estadio_nacional_students.png",
+    "textContent": "Political prisoners in the Estadio Nacional, 1973. Evandro Teixiera, a Brazilian correspondent with the Jornal do Brasil, was able to evade military escort supervision to take this photo and expose the dark realities of the Estadio Nacional. https://www.latercera.com/culto/2023/09/01/el-brasileno-que-desafio-a-la-dictadura-para-fotografiar-la-moneda-destruida-y-los-presos-del-estadio-nacional/"
+  }
 }

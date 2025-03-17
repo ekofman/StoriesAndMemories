@@ -1,1 +1,105 @@
-[]
+[
+  {
+    "id": "section-1",
+    "title": "Sisters from Odessa",
+    "start_time": 29,
+    "display_time": "0:00:29",
+    "image": "sara_and_ruben"
+  },
+  {
+    "id": "section-2",
+    "title": "Lost in the Train Station, Dos Huerfanas?",
+    "start_time": 471,
+    "display_time": "0:07:51"
+  },
+  {
+    "id": "section-3",
+    "title": "Maternal Tatárabuelos in Telenesh",
+    "start_time": 604,
+    "display_time": "0:10:04"
+  },
+  {
+    "id": "section-4",
+    "title": "Aaron Rejected at Ellis Island, Travels to Chile",
+    "start_time": 690,
+    "display_time": "0:11:30"
+  },
+  {
+    "id": "section-5",
+    "title": "Ester’s Sisters: Last Ship from Lisboa to Buenos Aires & Chile",
+    "start_time": 798,
+    "display_time": "0:13:18"
+  },
+  {
+    "id": "section-6",
+    "title": "Genealogical Museum in Israel",
+    "start_time": 871,
+    "display_time": "0:14:31"
+  },
+  {
+    "id": "section-7",
+    "title": "Sisters Arrive in Chile, Ester Found Widowed",
+    "start_time": 872,
+    "display_time": "0:14:32"
+  },
+  {
+    "id": "section-8",
+    "title": "Gregorio – The Only Brother of the Vugman Siblings",
+    "start_time": 1092,
+    "display_time": "0:18:12"
+  },
+  {
+    "id": "section-9",
+    "title": "Zipe and Fassler Travel from New York to Chile",
+    "start_time": 1416,
+    "display_time": "0:23:36"
+  },
+  {
+    "id": "section-10",
+    "title": "Ester meets Jose Greiber: Romance on the Boat from Brasil",
+    "start_time": 1817,
+    "display_time": "0:30:17"
+  },
+  {
+    "id": "section-11",
+    "title": "A Rush to Marry",
+    "start_time": 1851,
+    "display_time": "0:30:51"
+  },
+  {
+    "id": "section-12",
+    "title": "After the Chillán Earthquake",
+    "start_time": 1917,
+    "display_time": "0:31:57"
+  },
+  {
+    "id": "section-13",
+    "title": "Jewish Stories in Latin America?",
+    "start_time": 2052,
+    "display_time": "0:34:12"
+  },
+  {
+    "id": "section-14",
+    "title": "Colonization of Baron Hirsch in Argentina",
+    "start_time": 2162,
+    "display_time": "0:36:02"
+  },
+  {
+    "id": "section-15",
+    "title": "Genealogical Project in Israel with Many Photos",
+    "start_time": 2300,
+    "display_time": "0:38:20"
+  },
+  {
+    "id": "section-16",
+    "title": "Forecast: Lali Trump Will Be Reelected",
+    "start_time": 2968,
+    "display_time": "0:49:28"
+  },
+  {
+    "id": "section-17",
+    "title": "Aliyah of Lali, Her Sister, Brother & Parents in 1964",
+    "start_time": 3209,
+    "display_time": "0:53:29"
+  }
+]
