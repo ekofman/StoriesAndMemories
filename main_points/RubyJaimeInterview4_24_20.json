@@ -1,5 +1,12 @@
 [
     {
+      "id": "section-0.5",
+      "title": "Musical Introduction / Introduccion Musical",
+      "start_time": 0,
+      "display_time": "0:00:00",
+      "image": "union_israelita"
+    },    
+{
       "id": "section-1",
       "title": "Aron Jaikles, the first to arrive in Chile, and early member of the Jewish community",
       "start_time": 119,
@@ -19,6 +26,54 @@
       "start_time": 285,
       "display_time": "0:04:45",
       "image": "union_israelita"
+    },
+    {
+      "id": "section-4",
+      "title": "Aron was in textiles, also a 'semanalchik'",
+      "start_time": 319,
+      "display_time": "0:05:19",
+      "image": "union_israelita"
+    },
+    {
+      "id": "section-5",
+      "title": "3 Sisters: Sarita, Betty, and Zulema, all big readers",
+      "start_time": 385,
+      "display_time": "0:06:25",
+      "image": "jaikles_ladies"
+    },
+    {
+      "id": "section-6",
+      "title": "Leike (Lea Serber) came from a town near Odessa",
+      "start_time": 666,
+      "display_time": "0:11:06",
+      "image": "baby_leon_with_parents"
+    },
+    {
+      "id": "section-7",
+      "title": "Abram came because of imminent Russian army conscription",
+      "start_time": 947,
+      "display_time": "0:15:47",
+      "image": "baby_leon_with_parents"
+    },
+    {
+      "id": "section-8",
+      "title": "No major antisemitism despite a Chilean Nazi Party, among the huge German population that Chile brought in starting in 1856",
+      "start_time": 1080,
+      "display_time": "0:18:00",
+      "image": "baby_leon_with_parents"
+    },
+    {
+      "id": "section-10",
+      "title": "Ruby: My family tells me I'm being a Nazi for how much I hate the Nazis",
+      "start_time": 1244,
+      "display_time": "0:20:44",
+      "image": "baby_leon_with_parents"
+    },
+    {
+      "id": "section-12",
+      "title": "Ruby's father left Russia because of Soviet oppression",
+      "start_time": 1533,
+      "display_time": "0:25:33",
+      "image": "baby_leon_with_parents"
     }
-
 ]

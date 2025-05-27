@@ -1,9 +1,16 @@
 [
     {
+      "id": "section-0.5",
+      "title": "Musical Introduction/ Introduccion Musica",
+      "start_time": 0,
+      "display_time": "0:00:00",
+      "image": "ester_mina_brana_reunion"
+    },    
+    {
       "id": "section-1",
       "title": "Ester still making plans at 80: redecorating the living room",
-      "start_time": 32,
-      "display_time": "0:00:32",
+      "start_time": 50,
+      "display_time": "0:00:50",
       "image": "ester_mina_brana_reunion"
     },
     {
@@ -119,7 +126,7 @@
     {
       "id": "section-19",
       "title": "Marita's Architecture professor Miguel Lawner on Dawson Island, prison camp for intellectuals",
-      "start_time": 1380,
+      "start_time": 2151,
       "display_time": "0:35:51",
       "image": "isla_dawson"
     }, 

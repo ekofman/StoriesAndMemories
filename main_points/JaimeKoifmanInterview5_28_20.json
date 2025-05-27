@@ -1,4 +1,11 @@
 [
+ {
+      "id": "section-0.5",
+      "title": "Musical Introduction/ Introduccion Musical",
+      "start_time": 0,
+      "display_time": "0:00:00",
+      "image": "baby_leon_with_parents"
+    },
     {
       "id": "section-1",
       "title": "Maternal family (Lea/Leike's roots), Clara Shkolnik and Isaac Serber",
@@ -67,8 +74,8 @@
       "id": "section-10",
       "title": "Leike's brother Moises and Moises' daughter Frida.",
       "subtitle": "",
-      "start_time": 829,
-      "display_time": "0:13:49",
+      "start_time": 924,
+      "display_time": "0:15:24",
       "image": "baby_leon_with_parents"
     },
     {
@@ -83,16 +90,16 @@
       "id": "section-12",
       "title": "Holidays and gatherings at grandma Clara's",
       "subtitle": "",
-      "start_time": 1207,
-      "display_time": "0:20:09",
+      "start_time": 1183,
+      "display_time": "0:19:43",
       "image": "baby_leon_with_parents"
     },
     {
       "id": "section-13",
       "title": "I was always a bit chubbier",
       "subtitle": "",
-      "start_time": 1207,
-      "display_time": "0:20:09",
+      "start_time": 1253,
+      "display_time": "0:20:53",
       "image": "baby_leon_with_parents"
     },
     {

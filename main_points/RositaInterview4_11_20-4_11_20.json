@@ -27,14 +27,16 @@
       "title": "The entire family lived in one neighborhood in Santiago",
       "subtitle": "Everyone lived 6–8 blocks apart; no family had a car.",
       "start_time": 96,
-      "display_time": "0:01:37"
+      "display_time": "0:01:37",
+      "image": "family_reunion"
     },
     {
       "id": "section-6",
       "title": "The transfer from Conception to Santiago: help from Jaime Motlis",
       "subtitle": "Rosita mentions the traumatic transfer from Concepción to Santiago following the earthquake.",
       "start_time": 137,
-      "display_time": "0:02:17"
+      "display_time": "0:02:17",
+      "image": "jaime_motlis" 
     },
     {
       "id": "section-8",
@@ -48,7 +50,8 @@
       "title": "Living Arrangements: Big Houses and Mixed Emotions",
       "subtitle": "Rosita recounts living in large houses with extended family, with mixed feelings.",
       "start_time": 261,
-      "display_time": "0:04:21"
+      "display_time": "0:04:21",
+      "image": "sprintze_cecilia_chile"
     },
     {
       "id": "section-10",
@@ -59,7 +62,7 @@
     },
     {
       "id": "section-11",
-      "title": "Long-Term Childhood Memories",
+      "title": "Rosita's Childhood Memories: The Whole Family in One Neighborhood",
       "subtitle": "Rosita recalls Aunt Feige and that she saw these people frequently until her marriage.",
       "start_time": 406,
       "display_time": "0:06:46"
@@ -69,7 +72,8 @@
       "title": "Earthquake Memories: sleeping in tents at the Penco beachside resort",
       "subtitle": "She remembers the January earthquake and sleeping in tents at a pool house called 'Penco.'",
       "start_time": 448,
-      "display_time": "0:07:28"
+      "display_time": "0:07:28",
+      "image": "chillan_earthquake"
     },
     {
       "id": "section-14",
@@ -83,7 +87,8 @@
       "title": "Central Santiago: Plaza Italia and Neighborhood Streets",
       "subtitle": "A discussion about central Santiago (Plaza Italia, Ahumada, Plaza de Armas) and walkability.",
       "start_time": 630,
-      "display_time": "0:10:30"
+      "display_time": "0:10:30",
+      "image": "santiago_1930"
     },
     {
       "id": "section-16",
@@ -94,35 +99,29 @@
     },
     {
       "id": "section-17",
-      "title": "Mother’s Dramatic Early Life and Arrival in Chile",
+      "title": "Ester's Dramatic Early Life and Arrival in Chile",
       "subtitle": "Rosita recounts her mother's dramatic life, arriving in Chile in 1928 and being born in 1929.",
       "start_time": 783,
-      "display_time": "0:13:03"
+      "display_time": "0:13:03",
+      "image": "young_ester"
     },
     {
       "id": "section-18",
-      "title": "Mother’s Journey to Puerto Montt and Meeting on the Boat",
+      "title": "Ester's Journey to Puerto Montt and Meeting on the Boat",
       "subtitle": "She recounts how her mother left for Puerto Montt (with help from Uncle Aarón) and met Jose Greider on the boat.",
       "start_time": 865,
       "display_time": "0:14:25"
     },
     {
-      "id": "section-19",
-      "title": "Factory Work and Early Relocation in Concepción",
-      "subtitle": "Rosita describes working in a factory in Concepción, living behind it, and later moving to a nicer house.",
-      "start_time": 906,
-      "display_time": "0:15:06"
-    },
-    {
       "id": "section-20",
-      "title": "Family Economic Progress and Real Estate Investments",
-      "subtitle": "She explains how the family moved from Plaza Italia and invested in real estate (mentioning 'Lockshins').",
+      "title": "Rosita's Family Originally Lived in Quarters Attached to the Factory",
+      "subtitle": "",
       "start_time": 964,
       "display_time": "0:16:04"
     },
     {
       "id": "section-21",
-      "title": "Mother’s Business, Divorce, and Restarted Ventures",
+      "title": "Describing the Textile Factory Equipment -- Hand-Operated Looms. Ester's Business, Divorce, and Attempt to Start Again Post-Divorce",
       "subtitle": "After being widowed, her mother set up a new fabric factory and later tried to restart a workshop after divorce.",
       "start_time": 1034,
       "display_time": "0:17:14",
@@ -130,8 +129,8 @@
     },
     {
       "id": "section-22",
-      "title": "Real Estate and Investment Challenges",
-      "subtitle": "More details on investments, low property sale values, and financial challenges.",
+      "title": "Ester Liked Nice Clothes, and Rosita Also Does -- Ester Would Take Care to Dress Her Children Well",
+      "subtitle": "",
       "start_time": 1123,
       "display_time": "0:18:43"
     },
@@ -158,7 +157,7 @@
     },
     {
       "id": "section-26",
-      "title": "Mother’s Independence and Business Legacy",
+      "title": "Ester's Independence",
       "subtitle": "Reflections on how her mother managed to start a business on her own despite challenges.",
       "start_time": 1576,
       "display_time": "0:26:16"

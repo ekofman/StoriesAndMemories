@@ -15,6 +15,14 @@
     "src": "images/ShprintzeMikhael.jpg",
     "textContent": "Top of the Family Tree. Sprintze and Michael (Mosher) Jaikles (1915?)."
   },
+  "rosita_young_overcoat": {
+    "src": "images/rosita_young_overcoat.png",
+    "textContent": "Rosita. A young Rosa Greiber posing in about 1934."
+  },
+  "rosita_nano_young": {
+    "src": "images/rosita_nano_young.png",
+    "textContent": "Rosita and Nano. The two children pose in about 1936."
+  },
   "Valparaiso": {
     "src": "images/ester_rosita_nano_1941_valparaiso.jpg",
     "textContent": "Holiday by the Beach. Ester, Rosita and Nano in Cartagena near Valparaiso, 1941"
@@ -26,6 +34,10 @@
   "graf_waldersee": {
     "src": "images/GrafWaldersee.png",
     "textContent": "Graf Waldersee. An illustration of the Graf Waldersee, the ship on which the Jaikles sailed from Hamburg to New York."
+  },
+  "mari": {
+    "src": "mari.jpg",
+    "textContent": "Mari. Ester's youngest sister Mari, who stayed back in the Soviet Union. Once Mina and Uli were set up in Los Angeles, Mina was able to sponsor to her to have her and her family, including daughter Isabella, enter the US."
   },
   "family_reunion": {
     "src": "images/Chile_Family_Reunion.JPG",
@@ -47,7 +59,7 @@
    "src": "images/Sprintze_Cecilia_Chile.jpeg",
    "textContent": "Cecilia (Tzippe) and her family, Chile 1926. Evidently Sprintze made it to Chile to visit her daughter and son-in-law Harry Fassler"
  },
- "vugmangrave": {
+ "vugman_grave": {
    "src": "images/vugmangrave.jpeg",
    "textContent": "Ruben and Sara's Grave in Orhei/Orgeyev. It is unclear where and when exactly they died. This grave may have been erected after Mari returned to Orgeyev from Tbilisi after the war."
  },
