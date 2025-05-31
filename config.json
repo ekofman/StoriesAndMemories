@@ -5,7 +5,7 @@
     "spanish_transcript_file": "transcripts/RositaInterview4_29_20-11_17_23.txt",
     "audio_file": "audio/RositaInterview4_29_20-11_17_23.mp3",
     "output_file": "RositaInterview4_29_20-11_17_23.html",
-    "page_title": "Rosita - 4/29/20 (Ester, el Terremoto, Concepción de antaño)"
+    "page_title": "Rosita - 4/29/20: Ester, el Terremoto, Concepción de antaño"
   },
   "RositaInterview4_11_20-4_11_20": {
     "page_id": "RositaInterview4_11_20-4_11_20",
@@ -13,41 +13,41 @@
     "spanish_transcript_file": "transcripts/RositaInterview4_11_20-4_11_20.txt",
     "audio_file": "audio/RositaInterview4_11_20-4_11_20.mp3",
     "output_file": "RositaInterview4_11_20-4_11_20.html",
-    "page_title": "Rosita - 4/11/20 (La familia y las fabricas de textiles en Santiago)"
+    "page_title": "Rosita - 4/11/20: La familia y las fabricas de textiles en Santiago"
   },
   "MaritaInterview5_4_20": {
     "page_id": "MaritaInterview5_4_20",
     "spanish_transcript_file": "transcripts/MaritaInterview5_4_20.txt",
     "audio_file": "audio/MaritaInterview5_4_20.mp3",
     "output_file": "MaritaInterview5_4_20.html",
-    "page_title": "Marita: Recuerdos de Ester y de la comunidad Judia"
+    "page_title": "Marita - 5/4/20: Recuerdos de Ester y de la comunidad Judia"
   },
   "MaritaInterview5_15_20_pinochet": {
     "page_id": "MaritaInterview5_15_20_pinochet",
     "spanish_transcript_file": "transcripts/MaritaInterview5_15_20_pinochet.txt",
     "audio_file": "audio/MaritaInterview5_15_20_pinochet.mp3",
     "output_file": "MaritaInterview5_15_20_pinochet.html",
-    "page_title": "Marita: Recuerdos de las epocas de Allende y Pinochet"
+    "page_title": "Marita - 5/15/20: Recuerdos de las epocas de Allende y Pinochet"
   },
   "JaimeKoifmanInterview5_28_20": {
     "page_id": "JaimeKoifmanInterview5_28_20",
     "spanish_transcript_file": "transcripts/JaimeKoifmanInterview5_28_20.txt",
     "audio_file": "audio/JaimeKoifmanInterview5_28_20.mp3",
     "output_file": "JaimeKoifmanInterview5_28_20.html",
-    "page_title": "Jaime Koifman: Origines de los Koifman, cuentos de la niñez de Jaime y Leon"
+    "page_title": "Jaime Koifman - 5/28/20: Origines de los Koifman, cuentos de la niñez de Jaime y Leon"
   },
   "RubyJaimeInterview4_24_20": {
     "page_id": "RubyJaimeInterview4_24_20",
     "spanish_transcript_file": "transcripts/RubyJaimeInterview4_24_20.txt",
     "audio_file": "audio/RubyJaimeInterview4_24_20.mp3",
     "output_file": "RubyJaimeInterview4_24_20.html",
-    "page_title": "Ruby Koifman Link: Aron Jaikles y Recuerdos de la familia Jaikles"
+    "page_title": "Ruby Koifman Link - 4/24/20: Aron Jaikles y Recuerdos de la familia Jaikles"
   },
   "LaliInterview4_19_20": {
     "page_id": "LaliInterview4_19_20",
     "spanish_transcript_file": "transcripts/LaliInterview4_19_20.txt",
     "audio_file": "audio/LaliInterview4_19_20.mp3",
     "output_file": "LaliInterview4_19_20.html",
-    "page_title": "Lali: Recuerdos trasmitidos de Brana, historia de la familia Jaikles"
+    "page_title": "Lali - 4/19/20: Recuerdos trasmitidos de Brana, historia de la familia Jaikles"
   }
 }
