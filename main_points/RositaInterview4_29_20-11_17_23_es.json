@@ -1,0 +1,96 @@
+[
+  {
+    "id": "section-1",
+    "title": "Estallido de la Segunda Guerra Mundial y primeras reflexiones sobre la guerra",
+    "start_time": 0,
+    "display_time": "0:00:00",
+    "image": "boarding_lisbon"
+  },
+  {
+    "id": "section-2",
+    "title": "El viaje de Mina y Brana de Orhei/Orgeyev a Lisboa",
+    "start_time": 19,
+    "display_time": "0:00:19",
+    "image": "boarding_lisbon"
+  },
+  {
+    "id": "section-3",
+    "title": "Un recuerdo de la infancia: el insólito incidente del baño",
+    "start_time": 122,
+    "display_time": "0:02:02"
+  },
+  {
+    "id": "section-4",
+    "title": "El edificio Vicuña Mackenna: hogar primero de Brana y Simón, luego de los padres de León",
+    "start_time": 304,
+    "display_time": "0:05:04",
+    "image": "santiago_1930"
+  },
+  {
+    "id": "section-5",
+    "title": "Prácticas religiosas y la devoción de Abram en la familia",
+    "start_time": 370,
+    "display_time": "0:06:10",
+    "image": "baby_leon_with_parents"
+  },
+  {
+    "id": "section-6",
+    "title": "Descripción de la personalidad de Ester: una mujer tranquila y fuerte",
+    "start_time": 436,
+    "display_time": "0:07:16",
+    "image": "young_ester"
+  },
+  {
+    "id": "section-7",
+    "title": "La importancia de la educación en la familia de Ester",
+    "start_time": 703,
+    "display_time": "0:11:43",
+    "image": "sara_and_ruben"
+  },
+  {
+    "id": "section-10",
+    "title": "La mejor amiga de Ester: Zina Brailovsky, cuyo hijo terminó en Boston",
+    "start_time": 876,
+    "display_time": "0:14:36"
+  },
+  {
+    "id": "section-11",
+    "title": "Recuerdos de Rosita sobre su padre",
+    "start_time": 1265,
+    "display_time": "0:21:05"
+  },
+  {
+    "id": "section-12",
+    "title": "La Casa de Mármol, el terremoto y la tragedia familiar",
+    "start_time": 1298,
+    "display_time": "0:21:38",
+    "image": "chillan_earthquake"
+  },
+  {
+    "id": "section-13",
+    "title": "Primeros recuerdos en Concepción",
+    "start_time": 1500,
+    "display_time": "0:25:00",
+    "image": "Valparaiso"
+  },
+  {
+    "id": "section-14",
+    "title": "Dificultades lingüísticas y búsqueda de más educación",
+    "start_time": 1578,
+    "display_time": "0:26:18"
+  },
+  {
+    "id": "section-15",
+    "title": "Natalio Berman, diputado comunista y amigo de José",
+    "start_time": 1631,
+    "display_time": "0:27:11",
+    "image": "natalio_berman"
+  },
+  {
+    "id": "section-16",
+    "title": "Dra. Luisa Berman, hermana de Natalio y amiga de Ester",
+    "start_time": 1631,
+    "display_time": "0:27:11",
+    "image": "natalio_berman"
+  }
+]

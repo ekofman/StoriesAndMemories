@@ -1,0 +1,204 @@
+[
+  {
+    "id": "section-0",
+    "title": "Pausa musical",
+    "start_time": 0,
+    "display_time": "0:00:00",
+    "image": "young_ester"
+  },
+  {
+    "id": "section-0.4",
+    "title": "La estrecha relación de Marita con Ester",
+    "start_time": 64,
+    "display_time": "1:04:00",
+    "image": "young_ester"
+  },
+  {
+    "id": "section-0.5",
+    "title": "Ester Vugman llega a Chile (1928)",
+    "start_time": 121,
+    "display_time": "0:02:01",
+    "image": "young_ester"
+  },
+  {
+    "id": "section-1",
+    "title": "Ester escribe a su familia rogándoles que se unan a ella: se resisten a dejar su tierra, pero Mina y Brana en 1939 parten a Chile",
+    "start_time": 185,
+    "display_time": "0:03:05",
+    "image": "boarding_lisbon"
+  },
+  {
+    "id": "section-2",
+    "title": "Rubén y Sara se quedan en Orgeyev mientras la guerra destruye su comunidad",
+    "start_time": 257,
+    "display_time": "0:04:17",
+    "image": "sara_and_ruben"
+  },
+  {
+    "id": "section-2.5",
+    "title": "Sara muere; Rubén y sus hijas se pierden en la estación de tren",
+    "start_time": 280,
+    "display_time": "0:04:40",
+    "image": "vugman_grave"
+  },
+  {
+    "id": "section-3",
+    "title": "Las dos hermanas menores de Ester quedan huérfanas en Kishinev después de la guerra",
+    "start_time": 365,
+    "display_time": "0:06:05"
+  },
+  {
+    "id": "section-4",
+    "title": "Mina envía regalos a sus hermanas menores en la Unión Soviética a través de varias personas, incluido el presidente del Partido Comunista Chileno Volodia Teitelboim. Mina lleva a Mane a EE.UU.; Ester visita a Mane",
+    "start_time": 566,
+    "display_time": "0:09:26",
+    "image": "family_reunion"
+  },
+  {
+    "id": "section-4.5",
+    "title": "Mina invita a todo el conjunto de danza folclórica rusa que visitaba a su casa para organizar regalos para la boda de Isabela y enviarlos a la Unión Soviética",
+    "start_time": 669,
+    "display_time": "0:11:09"
+  },
+  {
+    "id": "section-4.6",
+    "title": "Mina mueve influencias para llevar a Mari, su esposo y su hija Isabela (y su esposo) a Estados Unidos",
+    "start_time": 834,
+    "display_time": "0:13:54",
+    "image": "mari"
+  },
+  {
+    "id": "section-5",
+    "title": "Mane/Mari está descontenta con su vida en EE. UU. comparada con la Unión Soviética; esto provoca una gran pelea con Mina, quien la consideró desagradecida",
+    "start_time": 941,
+    "display_time": "0:15:41"
+  },
+  {
+    "id": "section-6",
+    "title": "Mina no olvida nada y no perdona a nadie",
+    "start_time": 1118,
+    "display_time": "0:18:38"
+  },
+  {
+    "id": "section-7",
+    "title": "Mina: una fuerza de la naturaleza",
+    "start_time": 1229,
+    "display_time": "0:20:29"
+  },
+  {
+    "id": "section-8",
+    "title": "Mina deja Chile rumbo a Los Ángeles; Brana y su familia se van a Israel",
+    "start_time": 1614,
+    "display_time": "0:26:54",
+    "image": "ester_mina_brana_reunion"
+  },
+  {
+    "id": "section-9",
+    "title": "Ester y José en Puerto Montt",
+    "start_time": 1904,
+    "display_time": "0:31:44"
+  },
+  {
+    "id": "section-10",
+    "title": "José escapa del clima infernal de Brasil",
+    "start_time": 1991,
+    "display_time": "0:33:11",
+    "image": "clara_chocler_greiber_id"
+  },
+  {
+    "id": "section-11",
+    "title": "Los Greiber de Brasil",
+    "start_time": 2199,
+    "display_time": "0:36:39",
+    "image": "elias_greibrer_id"
+  },
+  {
+    "id": "section-12",
+    "title": "Los padres de Ester en Kishinev, no religiosos",
+    "start_time": 2336,
+    "display_time": "0:38:56",
+    "image": "sara_and_ruben"
+  },
+  {
+    "id": "section-13",
+    "title": "Ester: una mujer de gran empuje",
+    "start_time": 2466,
+    "display_time": "0:41:06"
+  },
+  {
+    "id": "section-14",
+    "title": "Los ashkenazíes menosprecian a los sefardíes en Chile",
+    "start_time": 2556,
+    "display_time": "0:42:36"
+  },
+  {
+    "id": "section-15",
+    "title": "Ester: generosa y preocupada por sus hijos",
+    "start_time": 2734,
+    "display_time": "0:45:34"
+  },
+  {
+    "id": "section-15.5",
+    "title": "Nano: donjuán",
+    "start_time": 2849,
+    "display_time": "0:47:29",
+    "image": "nano_marita_leon_rosita"
+  },
+  {
+    "id": "section-16",
+    "title": "Terremoto de Chillán en Concepción",
+    "start_time": 2898,
+    "display_time": "0:48:18",
+    "image": "chillan_earthquake"
+  },
+  {
+    "id": "section-17",
+    "title": "La viuda de Gregorio Vugman, Fanny Minzer, entregó a su hijo mayor en adopción",
+    "start_time": 3056,
+    "display_time": "0:50:56",
+    "image": "ester_husband"
+  },
+  {
+    "id": "section-17.5",
+    "title": "Hijo dado en adopción se reencuentra con Ester",
+    "start_time": 3113,
+    "display_time": "0:51:53"
+  },
+  {
+    "id": "section-18",
+    "title": "Ester viaja con Gregorio y primos (los Jaikles)",
+    "start_time": 3373,
+    "display_time": "0:56:13"
+  },
+  {
+    "id": "section-19",
+    "title": "El padre de Marita nació en Estambul, hablaba ladino, se trasladó a Temuco",
+    "start_time": 3840,
+    "display_time": "1:04:00"
+  },
+  {
+    "id": "section-19.5",
+    "title": "La familia materna de Marita vino de Grecia; su abuelo materno fundó la comunidad sefardí chilena",
+    "start_time": 3975,
+    "display_time": "1:06:15"
+  },
+  {
+    "id": "section-20",
+    "title": "La cocina sefardí",
+    "start_time": 4200,
+    "display_time": "1:10:00"
+  },
+  {
+    "id": "section-21",
+    "title": "Ester por fin tiene tiempo para la cocina",
+    "start_time": 4405,
+    "display_time": "1:13:25"
+  },
+  {
+    "id": "section-22",
+    "title": "Un mal episodio: el shiduj de Ester con Poniachik",
+    "start_time": 4523,
+    "display_time": "1:15:23",
+    "image": "ester_husband"
+  }
+]
