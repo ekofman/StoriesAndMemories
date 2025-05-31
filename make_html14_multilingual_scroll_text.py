@@ -122,7 +122,7 @@ def process_transcript(file_path, main_points_list):
 def generate_page_with_nav(config, main_points_list_en, main_points_list_es, all_configs):
     page_id = config["page_id"]
 
-    # Process transcripts (English and Spanish)
+    # === Process transcripts (English and Spanish) ===
     if "spanish_transcript_file" in config:
         processed_sp = process_transcript(
             config["spanish_transcript_file"], main_points_list_es
@@ -137,7 +137,12 @@ def generate_page_with_nav(config, main_points_list_en, main_points_list_es, all
     else:
         processed_en = ""
 
-    # Build the navigation block (flat, table-like nav bar)
+    # Only show the transcript-toggle buttons if both English and Spanish exist
+    has_en = bool(processed_en.strip())
+    has_sp = bool(processed_sp.strip())
+    show_transcript_toggle = has_en and has_sp
+
+    # === Build the navigation bar ===
     nav_links = []
     for key, conf in all_configs.items():
         if conf["page_id"] == config["page_id"]:
@@ -152,10 +157,14 @@ def generate_page_with_nav(config, main_points_list_en, main_points_list_es, all
             )
     nav_block = "".join(nav_links)
 
-    # Build a JavaScript JSON string for the image dictionary
+    # === JSON for images, TOC, and transcript ===
     section_images_json = json.dumps(image_dict)
+    main_en_json = json.dumps(main_points_list_en)
+    main_es_json = json.dumps(main_points_list_es)
+    transcript_en_json = json.dumps(processed_en)
+    transcript_sp_json = json.dumps(processed_sp)
 
-    # Build the HTML content
+    # === Build HTML content using only f-strings ===
     html_content = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -326,7 +335,7 @@ audio {{
   color: #007acc;
 }}
 
-/* Right Column: Transcript with Toggle */
+/* Right Column: Transcript (toggle shown conditionally) */
 #right-column {{
   font-family: 'Roboto';
   width: 50%;
@@ -516,66 +525,43 @@ audio {{
             </div>
 
             <!-- TOC Toggle Buttons -->
-
-
             <div id="toc-title">
                 <h2>Table of Contents</h2>
-            <div id="toc-toggle">
-                <button onclick="showToc('spanish')">Español</button>
-                <button onclick="showToc('english')">English</button>
-            </div>
+                <div id="toc-toggle">
+                    <button onclick="showToc('spanish')">Español</button>
+                    <button onclick="showToc('english')">English</button>
+                </div>
             </div>
 
             <!-- Spanish TOC (visible by default) -->
             <div id="toc-es" class="toc-container">
                 <ul>
-"""
-    # Build the Spanish TOC (if any)
-    for mp in main_points_list_es:
-        html_content += (
-            f'                    <li>'
-            f'<a href="#{mp["id"]}" id="link-{mp["id"]}-es" '
-            f'onclick="jumpToSection(\'{mp["id"]}\', {mp["start_time"]}); return false;">'
-            f'{mp["title"]} ({mp["display_time"]})</a></li>\n'
-        )
-
-    html_content += """                </ul>
+{"".join(f'                    <li><a href="#{mp["id"]}" id="link-{mp["id"]}-es" onclick="jumpToSection(\'{mp["id"]}\', {mp["start_time"]}); return false;">{mp["title"]} ({mp["display_time"]})</a></li>\n' for mp in main_points_list_es)}
+                </ul>
             </div>
 
             <!-- English TOC (hidden by default) -->
             <div id="toc-en" class="toc-container" style="display:none;">
                 <ul>
-"""
-    # Build the English TOC
-    for mp in main_points_list_en:
-        html_content += (
-            f'                    <li>'
-            f'<a href="#{mp["id"]}" id="link-{mp["id"]}-en" '
-            f'onclick="jumpToSection(\'{mp["id"]}\', {mp["start_time"]}); return false;">'
-            f'{mp["title"]} ({mp["display_time"]})</a></li>\n'
-        )
-
-    html_content += """                </ul>
+{"".join(f'                    <li><a href="#{mp["id"]}" id="link-{mp["id"]}-en" onclick="jumpToSection(\'{mp["id"]}\', {mp["start_time"]}); return false;">{mp["title"]} ({mp["display_time"]})</a></li>\n' for mp in main_points_list_en)}
+                </ul>
             </div>
         </div>
-        <!-- Right Column: Transcript with Language Toggle -->
+
+        <!-- Right Column: Transcript (toggle shown only if both languages exist) -->
         <div id="right-column">
-            <div id="transcript-toggle">
+            {f"""<div id="transcript-toggle">
                 <button onclick="showTranscript('spanish')">Spanish</button>
                 <button onclick="showTranscript('english')">English</button>
-            </div>
+            </div>""" if show_transcript_toggle else ""}
             <div id="transcript-content">
                 <pre id="transcript-pre">
-"""
-    if processed_sp:
-        html_content += processed_sp
-    else:
-        html_content += processed_en
-
-    html_content += """                </pre>
+{processed_sp or processed_en}
+                </pre>
             </div>
         </div>
     </div>
+
     <!-- Floating Gallery Popup -->
     <div id="gallery-popup">
         <span id="gallery-close" onclick="closeGallery()">×</span>
@@ -589,188 +575,218 @@ audio {{
             </div>
         </div>
     </div>
+
     <script>
         // Global arrays/objects
-        var sectionImages = """ + section_images_json + """;
-        var mainPointsEn = """ + json.dumps(main_points_list_en) + """;
-        var mainPointsEs = """ + json.dumps(main_points_list_es) + """;
+        var sectionImages = {section_images_json};
+        var mainPointsEn = {main_en_json};
+        var mainPointsEs = {main_es_json};
 
-        // Update TOC: Highlight current section in whichever TOC is visible, scroll into view if needed
-        function updateToc() {
+        // Update TOC: highlight current section in whichever TOC is visible
+        function updateToc() {{
             var currentLang = document.getElementById("toc-es").style.display === "none" ? "en" : "es";
             var points = (currentLang === "en") ? mainPointsEn : mainPointsEs;
             var prefix = (currentLang === "en") ? "-en" : "-es";
-
             var containerId = (currentLang === "en") ? "toc-en" : "toc-es";
             var tocContainer = document.getElementById(containerId);
 
-            points.forEach(function(pt) {
+            points.forEach(function(pt) {{
                 var entry = document.getElementById("link-" + pt.id + prefix);
-                if (entry) {
-                    if (pt.id === currentSectionId) {
+                if (entry) {{
+                    if (pt.id === currentSectionId) {{
                         entry.style.color = "black";
                         var containerRect = tocContainer.getBoundingClientRect();
                         var entryRect = entry.getBoundingClientRect();
-                        if (entryRect.top < containerRect.top || entryRect.bottom > containerRect.bottom) {
-                            entry.scrollIntoView({ behavior: "smooth", block: "nearest" });
-                        }
-                    } else {
+                        if (entryRect.top < containerRect.top || entryRect.bottom > containerRect.bottom) {{
+                            entry.scrollIntoView({{ behavior: "smooth", block: "nearest" }});
+                        }}
+                    }} else {{
                         entry.style.color = "gray";
-                    }
-                }
-            });
-        }
+                    }}
+                }}
+            }});
+        }}
 
-        // Helper function to update the full gallery image (only if the section has an image)
-        function updateGalleryImage(sectionId) {
-            var pointEs = mainPointsEs.find(function(pt) { return pt.id === sectionId; });
-            var pointEn = mainPointsEn.find(function(pt) { return pt.id === sectionId; });
+        // Helper: update the gallery-full image
+        function updateGalleryImage(sectionId) {{
+            var pointEs = mainPointsEs.find(function(pt) {{ return pt.id === sectionId; }});
+            var pointEn = mainPointsEn.find(function(pt) {{ return pt.id === sectionId; }});
             var point = pointEs || pointEn;
-
-            if (point && point.hasOwnProperty("image") && sectionImages.hasOwnProperty(point.image)) {
+            if (point && point.hasOwnProperty("image") && sectionImages.hasOwnProperty(point.image)) {{
                 document.getElementById("gallery-full").src = sectionImages[point.image].src;
                 var fullText = sectionImages[point.image].textContent;
                 var titleText = fullText.split(".")[0];
                 document.getElementById("gallery-full-title").textContent = titleText;
                 document.getElementById("gallery-full-subtitle").textContent = fullText;
-            }
-        }
+            }}
+        }}
 
-        // Functions for manual image navigation in the main page
-        function prevImage() {
+        // Next/Prev image on main page
+        function prevImage() {{
             var combined = mainPointsEn.concat(mainPointsEs);
-            // Deduplicate by id
             var seen = new Set();
             var merged = [];
-            combined.forEach(function(pt) {
-                if (!seen.has(pt.id)) {
+            combined.forEach(function(pt) {{
+                if (!seen.has(pt.id)) {{
                     seen.add(pt.id);
                     merged.push(pt);
-                }
-            });
-            // Find previous section with image
-            for (var i = merged.length - 1; i >= 0; i--) {
-                if (
-                    merged[i].hasOwnProperty("image") &&
-                    merged[i].id < currentSectionId
-                ) {
+                }}
+            }});
+            for (var i = merged.length - 1; i >= 0; i--) {{
+                if (merged[i].hasOwnProperty("image") && merged[i].id < currentSectionId) {{
                     currentSectionId = merged[i].id;
                     updateImageForSection(currentSectionId);
                     updateToc();
                     return;
-                }
-            }
-        }
+                }}
+            }}
+        }}
 
-        function nextImage() {
+        function nextImage() {{
             var combined = mainPointsEn.concat(mainPointsEs);
             var seen = new Set();
             var merged = [];
-            combined.forEach(function(pt) {
-                if (!seen.has(pt.id)) {
+            combined.forEach(function(pt) {{
+                if (!seen.has(pt.id)) {{
                     seen.add(pt.id);
                     merged.push(pt);
-                }
-            });
-            // Find next section with image
-            for (var i = 0; i < merged.length; i++) {
-                if (
-                    merged[i].hasOwnProperty("image") &&
-                    merged[i].id > currentSectionId
-                ) {
+                }}
+            }});
+            for (var i = 0; i < merged.length; i++) {{
+                if (merged[i].hasOwnProperty("image") && merged[i].id > currentSectionId) {{
                     currentSectionId = merged[i].id;
                     updateImageForSection(currentSectionId);
                     updateToc();
                     return;
-                }
-            }
-        }
+                }}
+            }}
+        }}
 
-        function updateImageForSection(sectionId) {
-            var pointEs = mainPointsEs.find(function(pt) { return pt.id === sectionId; });
-            var pointEn = mainPointsEn.find(function(pt) { return pt.id === sectionId; });
+        function updateImageForSection(sectionId) {{
+            var pointEs = mainPointsEs.find(function(pt) {{ return pt.id === sectionId; }});
+            var pointEn = mainPointsEn.find(function(pt) {{ return pt.id === sectionId; }});
             var point = pointEs || pointEn;
-
-            if (point && point.hasOwnProperty("image") && sectionImages.hasOwnProperty(point.image)) {
+            if (point && point.hasOwnProperty("image") && sectionImages.hasOwnProperty(point.image)) {{
                 document.getElementById("current-image").src = sectionImages[point.image].src;
                 document.getElementById("image-subtitle").textContent = sectionImages[point.image].textContent;
-            }
-        }
+            }}
+        }}
 
         // TOC toggle logic
-        function showToc(lang) {
-            if (lang === "english") {
+        function showToc(lang) {{
+            if (lang === "english") {{
                 document.getElementById("toc-en").style.display = "block";
                 document.getElementById("toc-es").style.display = "none";
-            } else {
+            }} else {{
                 document.getElementById("toc-en").style.display = "none";
                 document.getElementById("toc-es").style.display = "block";
-            }
+            }}
             updateToc();
-        }
+        }}
 
-        // Transcript toggle logic
+        // Transcript toggle logic (only if both exist)
         var transcriptPre = document.getElementById("transcript-pre");
-        var transcriptEnglish = """ + json.dumps(processed_en) + """;
-        var transcriptSpanish = """ + json.dumps(processed_sp) + """;
-        function showTranscript(lang) {
+        var transcriptEnglish = {transcript_en_json};
+        var transcriptSpanish = {transcript_sp_json};
+        function showTranscript(lang) {{
             transcriptPre.innerHTML = (lang === "english") ? transcriptEnglish : transcriptSpanish;
-        }
-        // Initialize with Spanish transcript
-        showTranscript("spanish");
+        }}
+        {"/* Initialize with Spanish transcript */ showTranscript('spanish');" if show_transcript_toggle else ""}
 
         // Audio jump function
-        function jumpToTime(seconds) {
+        function jumpToTime(seconds) {{
             var audio = document.getElementById("audioPlayer");
             audio.currentTime = seconds;
             audio.play();
-        }
+        }}
 
         // Function to jump to a section
-        function jumpToSection(sectionId, seconds) {
+        function jumpToSection(sectionId, seconds) {{
             jumpToTime(seconds);
             var anchor = document.getElementById(sectionId);
-            if (anchor) {
-                anchor.scrollIntoView({ behavior: "smooth", block: "start" });
-            }
+            if (anchor) {{
+                anchor.scrollIntoView({{ behavior: "smooth", block: "start" }});
+            }}
             currentSectionId = sectionId;
             updateToc();
             updateImageForSection(currentSectionId);
-        }
+        }}
 
-        // Update TOC and main image based on scroll position in transcript
+        // Update TOC & image based on scroll position in transcript
         var scrollDiv = document.getElementById("right-column");
-        if (scrollDiv) {
-            scrollDiv.addEventListener("scroll", function() {
+        if (scrollDiv) {{
+            scrollDiv.addEventListener("scroll", function() {{
                 var containerRect = scrollDiv.getBoundingClientRect();
                 var combined = mainPointsEn.concat(mainPointsEs);
                 var closestSectionId = "";
                 var minDiff = Infinity;
-                combined.forEach(function(point) {
+                combined.forEach(function(point) {{
                     var anchor = document.getElementById(point.id);
-                    if (anchor) {
+                    if (anchor) {{
                         var diff = Math.abs(anchor.getBoundingClientRect().top - containerRect.top);
-                        if (diff < minDiff) {
+                        if (diff < minDiff) {{
                             minDiff = diff;
                             closestSectionId = point.id;
-                        }
-                    }
-                });
-                if (closestSectionId && closestSectionId !== currentSectionId) {
+                        }}
+                    }}
+                }});
+                if (closestSectionId && closestSectionId !== currentSectionId) {{
                     currentSectionId = closestSectionId;
                     updateToc();
                     updateImageForSection(currentSectionId);
-                }
-            });
-        }
+                }}
+            }});
+        }}
 
-        // Current section starts at the first Spanish section if available, else English
+        // Current section starts at the first Spanish section if available, otherwise English
         var currentSectionId = (mainPointsEs.length > 0) ? mainPointsEs[0].id
                                 : (mainPointsEn.length > 0) ? mainPointsEn[0].id
                                 : "";
-        // Initialize TOC and image based on default
+        // Initialize TOC & image
         showToc("spanish");
         updateImageForSection(currentSectionId);
+
+        // Open gallery popup
+        function openGallery() {{
+            document.getElementById("gallery-popup").style.display = "block";
+            updateGalleryImage(currentSectionId);
+            populateGalleryThumbnails();
+        }}
+
+        // Close gallery popup
+        function closeGallery() {{
+            document.getElementById("gallery-popup").style.display = "none";
+        }}
+
+        // Populate gallery thumbnails
+        function populateGalleryThumbnails() {{
+            var thumbsPane = document.getElementById("gallery-thumbs-pane");
+            thumbsPane.innerHTML = "";
+            Object.keys(sectionImages).forEach(function(key) {{
+                var imgObj = sectionImages[key];
+                var thumb = document.createElement("img");
+                thumb.src = imgObj.src;
+                thumb.onclick = function() {{
+                    document.getElementById("gallery-full").src = imgObj.src;
+                    document.getElementById("gallery-full-title").textContent = imgObj.textContent.split(".")[0];
+                    document.getElementById("gallery-full-subtitle").textContent = imgObj.textContent;
+                    var allThumbs = thumbsPane.getElementsByTagName("img");
+                    for (var i = 0; i < allThumbs.length; i++) {{
+                        allThumbs[i].classList.remove("selected");
+                    }}
+                    thumb.classList.add("selected");
+                }};
+                var currentPoint = mainPointsEs.find(function(pt) {{
+                    return pt.hasOwnProperty("image") && pt.image === key;
+                }}) || mainPointsEn.find(function(pt) {{
+                    return pt.hasOwnProperty("image") && pt.image === key;
+                }});
+                if (currentPoint && currentPoint.id === currentSectionId) {{
+                    thumb.classList.add("selected");
+                }}
+                thumbsPane.appendChild(thumb);
+            }});
+        }}
     </script>
 </body>
 </html>
@@ -778,7 +794,9 @@ audio {{
 
     with open(config["output_file"], "w", encoding="utf-8") as f:
         f.write(html_content)
+
     print(f"HTML file generated: {config['output_file']}")
+
 
 # === Generate Pages for All Interviews ===
 for key, conf in config_dict.items():

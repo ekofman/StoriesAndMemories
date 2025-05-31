@@ -35,6 +35,10 @@
     "src": "images/GrafWaldersee.png",
     "textContent": "Graf Waldersee. An illustration of the Graf Waldersee, the ship on which the Jaikles sailed from Hamburg to New York."
   },
+  "ship_manifest": {
+    "src": "images/ship_manifest.png",
+    "textContent": "Passenger records for the Jaikles' Hamburg-New York journey. They are listed at the bottom, as Mosher/Mocher, Sprinse, Zipe, Paje, and Bine Chaikilis. You can see on the right-hand columns that the women of the group are listed as “Schneiderin,” or seamstresses, while Mocher is listed as “Händler,” or merchant. Their hometown is listed as Telenesh, Russia."
+  },
   "mari": {
     "src": "mari.jpg",
     "textContent": "Mari. Ester's youngest sister Mari, who stayed back in the Soviet Union. Once Mina and Uli were set up in Los Angeles, Mina was able to sponsor to her to have her and her family, including daughter Isabella, enter the US."

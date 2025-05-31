@@ -58,7 +58,7 @@ audio {
   height: calc(100vh - 140px);
 }
 
-/* Left Column: Buttons, Image Subtitle, Image, and TOC */
+/* Left Column: Buttons, Image Subtitle, Image, TOC, and TOC Toggle */
 #left-column {
   width: 50%;
   display: flex;
@@ -114,65 +114,61 @@ audio {
   object-fit: contain;
 }
 
-#gallery-link button {
-  background-color: #ffffff;
-  border: 2px solid #007acc;
-  border-radius: 8px;
-  padding: 4px 6px;
-  font-size: .8em;
-  color: #000000;
+/* TOC Toggle Buttons */
+#toc-toggle {
+  text-align: center;
+  margin: 5px 0;
+}
+#toc-toggle button {
+  margin: 0 5px;
+  padding: 6px 12px;
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  transition: background-color 0.3s;
+}
+#toc-toggle button:hover {
+  background-color: #005fa3;
 }
 
-#gallery-link button:hover {
-  background: linear-gradient(to right, #ffffff, #e6f4ff);
-  color: #005fa3;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-#gallery-link button:active {
-  background-color: #cce0ff;
-  transform: translateY(2px);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
+/* TOC Containers */
 #toc-title {
   font-size: 0.7em;
   text-align: center;
   border-top: 1px solid #e0e0e0;
 }
-#toc-container {
+.toc-container {
   height: 34%;
   overflow-y: auto;
   background-color: #fafafa;
   border-top: 1px solid #e0e0e0;
   padding: 10px;
 }
-#toc-container h2 {
+.toc-container h2 {
   margin: 0 0 10px 0;
   font-size: 1.2em;
   color: #007acc;
 }
-#toc-container ul {
+.toc-container ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-#toc-container li {
+.toc-container li {
   margin-bottom: 8px;
 }
-#toc-container a {
+.toc-container a {
   text-decoration: none;
   color: #555;
   transition: color 0.3s;
 }
-#toc-container a:hover {
+.toc-container a:hover {
   color: #007acc;
 }
 
-/* Right Column: Transcript with Toggle */
+/* Right Column: Transcript (toggle shown conditionally) */
 #right-column {
   font-family: 'Roboto';
   width: 50%;
@@ -329,7 +325,7 @@ audio {
 </head>
 <body>
     <h1>Jaime Koifman: Origines de los Koifman, cuentos de la niñez de Jaime y Leon</h1>
-    <div style="font-size: 0.8em; padding-top: 0px;"><I>
+    <div style="font-size: 0.8em; padding-top: 0px;"><i>
 <div><b>Navégue los entrevistas a través de los links a la izquierda en el "Table of Contents" o los conectados a las indicaciones de tiempo en la sección con las transcripciónes a la derecha (i.e. 0:13:49). Haga click en "Open Gallery" para ver todas las fotos.</b>
 <div id="acknowledgements">
 <div>* Muchas gracias a todos los participantes, entre cuales algunos ya no están con nosotros. Espero que las grabaciones sirvan como bonitos recuerdos, preservando a personalidades y cuentos únicos. </div>
@@ -347,7 +343,7 @@ audio {
     </audio>
     <!-- Main Container with Two Columns -->
     <div id="main-container">
-        <!-- Left Column: Buttons, Image Subtitle, Image, TOC, and Gallery Link -->
+        <!-- Left Column: Image Controls, Image, TOC Toggle, TOC, and Gallery Link -->
         <div id="left-column">
             <div id="buttons">
                 <button id="prev-image" onclick="prevImage()">&#9664;</button>
@@ -360,42 +356,74 @@ audio {
             <div id="gallery-link" style="text-align:center; margin:5px;">
                 <button onclick="openGallery()">Open Gallery</button>
             </div>
+
+            <!-- TOC Toggle Buttons -->
             <div id="toc-title">
                 <h2>Table of Contents</h2>
-            </div>
-            <div id="toc-container">
-                <div id="toc">
-                    <ul>
-                        <li><a href="#section-0.5" id="link-section-0.5" onclick="jumpToSection('section-0.5', 0); return false;">Musical Introduction/ Introduccion Musical (0:00:00)</a></li>
-                        <li><a href="#section-1" id="link-section-1" onclick="jumpToSection('section-1', 19); return false;">Maternal family (Lea/Leike's roots), Clara Shkolnik and Isaac Serber (0:00:19)</a></li>
-                        <li><a href="#section-2" id="link-section-2" onclick="jumpToSection('section-2', 134); return false;">Abram Coifman's roots in Romania (0:02:14)</a></li>
-                        <li><a href="#section-3" id="link-section-3" onclick="jumpToSection('section-3', 258); return false;">Abram and Leike meet in Chile in 1926 (0:04:18)</a></li>
-                        <li><a href="#section-4" id="link-section-4" onclick="jumpToSection('section-4', 308); return false;">Leike's sister Ester's family with Elias Busell (0:05:08)</a></li>
-                        <li><a href="#section-5" id="link-section-5" onclick="jumpToSection('section-5', 403); return false;">The Koifman brothers: Leon, Jaime, and Israel (0:06:43)</a></li>
-                        <li><a href="#section-6" id="link-section-6" onclick="jumpToSection('section-6', 577); return false;">The holidays and schul: Yom Kippur and Pesach at the Beneverit (0:09:36)</a></li>
-                        <li><a href="#section-7" id="link-section-7" onclick="jumpToSection('section-7', 745); return false;">None of us were Kosher! Except Abram's parents... (0:12:27)</a></li>
-                        <li><a href="#section-9" id="link-section-9" onclick="jumpToSection('section-9', 829); return false;">Abram's sister in Haifa. (0:13:49)</a></li>
-                        <li><a href="#section-10" id="link-section-10" onclick="jumpToSection('section-10', 924); return false;">Leike's brother Moises and Moises' daughter Frida. (0:15:24)</a></li>
-                        <li><a href="#section-11" id="link-section-11" onclick="jumpToSection('section-11', 1106); return false;">Leon and Jaime's brother Israel, world traveler -- 'pata de perro' (0:18:26)</a></li>
-                        <li><a href="#section-12" id="link-section-12" onclick="jumpToSection('section-12', 1183); return false;">Holidays and gatherings at grandma Clara's (0:19:43)</a></li>
-                        <li><a href="#section-13" id="link-section-13" onclick="jumpToSection('section-13', 1253); return false;">I was always a bit chubbier (0:20:53)</a></li>
-                        <li><a href="#section-14" id="link-section-14" onclick="jumpToSection('section-14', 1371); return false;">Leike was a very protective mother (0:22:51)</a></li>
-                        <li><a href="#section-15" id="link-section-15" onclick="jumpToSection('section-15', 1414); return false;">Kissen mein tuchus! (0:23:34)</a></li>
-                        <li><a href="#section-16" id="link-section-16" onclick="jumpToSection('section-16', 1556); return false;">Jaime and Leon: age gap of 5 years, and different social circles (0:25:56)</a></li>
-                        <li><a href="#section-17" id="link-section-17" onclick="jumpToSection('section-17', 1611); return false;">Israel (Sulo): the prodigal son (0:26:51)</a></li>
-                        <li><a href="#section-18" id="link-section-18" onclick="jumpToSection('section-18', 1832); return false;">Abram's Journey from Romania to Chile, through Argentina (0:30:32)</a></li>
-                        <li><a href="#section-19" id="link-section-19" onclick="jumpToSection('section-19', 1887); return false;">Abram: a kind father, and modest man (0:31:27)</a></li>
-                        <li><a href="#section-20" id="link-section-20" onclick="jumpToSection('section-20', 1949); return false;">Working as a 'Semanalchik' in the 40s, trying to manufacture blue jeans in the 60s (0:32:29)</a></li>
-                    </ul>
+                <div id="toc-toggle">
+                    <button onclick="showToc('spanish')">Español</button>
+                    <button onclick="showToc('english')">English</button>
                 </div>
             </div>
-        </div>
-        <!-- Right Column: Transcript with Toggle -->
-        <div id="right-column">
-            <div id="transcript-toggle">
-                <button onclick="showTranscript('spanish')">Spanish</button>
-                <button onclick="showTranscript('english')">English</button>
+
+            <!-- Spanish TOC (visible by default) -->
+            <div id="toc-es" class="toc-container">
+                <ul>
+                    <li><a href="#section-0.5" id="link-section-0.5-es" onclick="jumpToSection('section-0.5', 0); return false;">Introducción musical (0:00:00)</a></li>
+                    <li><a href="#section-1" id="link-section-1-es" onclick="jumpToSection('section-1', 19); return false;">Familia materna (raíces de Lea/Leike), Clara Shkolnik e Isaac Serber (0:00:19)</a></li>
+                    <li><a href="#section-2" id="link-section-2-es" onclick="jumpToSection('section-2', 134); return false;">Orígenes de Abram Coifman en Rumania (0:02:14)</a></li>
+                    <li><a href="#section-3" id="link-section-3-es" onclick="jumpToSection('section-3', 258); return false;">Abram y Leike se conocen en Chile en 1926 (0:04:18)</a></li>
+                    <li><a href="#section-4" id="link-section-4-es" onclick="jumpToSection('section-4', 308); return false;">La familia de Ester, hermana de Leike, con Elías Busell (0:05:08)</a></li>
+                    <li><a href="#section-5" id="link-section-5-es" onclick="jumpToSection('section-5', 403); return false;">Los hermanos Koifman: León, Jaime e Israel (0:06:43)</a></li>
+                    <li><a href="#section-6" id="link-section-6-es" onclick="jumpToSection('section-6', 577); return false;">Las fiestas y el shul: Yom Kipur y Pesaj en el Benivrit (0:09:36)</a></li>
+                    <li><a href="#section-7" id="link-section-7-es" onclick="jumpToSection('section-7', 745); return false;">¡Ninguno de nosotros era kosher! Excepto los padres de Abram... (0:12:27)</a></li>
+                    <li><a href="#section-9" id="link-section-9-es" onclick="jumpToSection('section-9', 829); return false;">La hermana de Abram en Haifa. (0:13:49)</a></li>
+                    <li><a href="#section-10" id="link-section-10-es" onclick="jumpToSection('section-10', 924); return false;">El hermano de Leike, Moisés, y la hija de Moisés, Frida. (0:15:24)</a></li>
+                    <li><a href="#section-11" id="link-section-11-es" onclick="jumpToSection('section-11', 1106); return false;">El hermano de León y Jaime, Israel, siempre viajando — 'pata de perro' (0:18:26)</a></li>
+                    <li><a href="#section-12" id="link-section-12-es" onclick="jumpToSection('section-12', 1183); return false;">Fiestas y reuniones en casa de la abuela Clara (0:19:43)</a></li>
+                    <li><a href="#section-13" id="link-section-13-es" onclick="jumpToSection('section-13', 1253); return false;">Yo siempre fui un poco más gordito (0:20:53)</a></li>
+                    <li><a href="#section-14" id="link-section-14-es" onclick="jumpToSection('section-14', 1371); return false;">Leike era una madre muy protectora (0:22:51)</a></li>
+                    <li><a href="#section-15" id="link-section-15-es" onclick="jumpToSection('section-15', 1414); return false;">¡kush meyn tokhes! (0:23:34)</a></li>
+                    <li><a href="#section-16" id="link-section-16-es" onclick="jumpToSection('section-16', 1556); return false;">Jaime y León: diferencia de edad de 5 años y distintos círculos sociales (0:25:56)</a></li>
+                    <li><a href="#section-17" id="link-section-17-es" onclick="jumpToSection('section-17', 1611); return false;">Israel (Sulo): el hijo pródigo (0:26:51)</a></li>
+                    <li><a href="#section-18" id="link-section-18-es" onclick="jumpToSection('section-18', 1832); return false;">El viaje de Abram de Rumania a Chile, pasando por Argentina (0:30:32)</a></li>
+                    <li><a href="#section-19" id="link-section-19-es" onclick="jumpToSection('section-19', 1887); return false;">Abram: un padre amable y un hombre modesto (0:31:27)</a></li>
+                    <li><a href="#section-20" id="link-section-20-es" onclick="jumpToSection('section-20', 1949); return false;">Trabajando como 'semanalchik' en los 40, intentando fabricar blue jeans en los 60 (0:32:29)</a></li>
+
+                </ul>
             </div>
+
+            <!-- English TOC (hidden by default) -->
+            <div id="toc-en" class="toc-container" style="display:none;">
+                <ul>
+                    <li><a href="#section-0.5" id="link-section-0.5-en" onclick="jumpToSection('section-0.5', 0); return false;">Musical Introduction/ Introduccion Musical (0:00:00)</a></li>
+                    <li><a href="#section-1" id="link-section-1-en" onclick="jumpToSection('section-1', 19); return false;">Maternal family (Lea/Leike's roots), Clara Shkolnik and Isaac Serber (0:00:19)</a></li>
+                    <li><a href="#section-2" id="link-section-2-en" onclick="jumpToSection('section-2', 134); return false;">Abram Coifman's roots in Romania (0:02:14)</a></li>
+                    <li><a href="#section-3" id="link-section-3-en" onclick="jumpToSection('section-3', 258); return false;">Abram and Leike meet in Chile in 1926 (0:04:18)</a></li>
+                    <li><a href="#section-4" id="link-section-4-en" onclick="jumpToSection('section-4', 308); return false;">Leike's sister Ester's family with Elias Busell (0:05:08)</a></li>
+                    <li><a href="#section-5" id="link-section-5-en" onclick="jumpToSection('section-5', 403); return false;">The Koifman brothers: Leon, Jaime, and Israel (0:06:43)</a></li>
+                    <li><a href="#section-6" id="link-section-6-en" onclick="jumpToSection('section-6', 577); return false;">The holidays and schul: Yom Kippur and Pesach at the Beneverit (0:09:36)</a></li>
+                    <li><a href="#section-7" id="link-section-7-en" onclick="jumpToSection('section-7', 745); return false;">None of us were Kosher! Except Abram's parents... (0:12:27)</a></li>
+                    <li><a href="#section-9" id="link-section-9-en" onclick="jumpToSection('section-9', 829); return false;">Abram's sister in Haifa. (0:13:49)</a></li>
+                    <li><a href="#section-10" id="link-section-10-en" onclick="jumpToSection('section-10', 924); return false;">Leike's brother Moises and Moises' daughter Frida. (0:15:24)</a></li>
+                    <li><a href="#section-11" id="link-section-11-en" onclick="jumpToSection('section-11', 1106); return false;">Leon and Jaime's brother Israel, world traveler -- 'pata de perro' (0:18:26)</a></li>
+                    <li><a href="#section-12" id="link-section-12-en" onclick="jumpToSection('section-12', 1183); return false;">Holidays and gatherings at grandma Clara's (0:19:43)</a></li>
+                    <li><a href="#section-13" id="link-section-13-en" onclick="jumpToSection('section-13', 1253); return false;">I was always a bit chubbier (0:20:53)</a></li>
+                    <li><a href="#section-14" id="link-section-14-en" onclick="jumpToSection('section-14', 1371); return false;">Leike was a very protective mother (0:22:51)</a></li>
+                    <li><a href="#section-15" id="link-section-15-en" onclick="jumpToSection('section-15', 1414); return false;">kush meyn tokhes! (0:23:34)</a></li>
+                    <li><a href="#section-16" id="link-section-16-en" onclick="jumpToSection('section-16', 1556); return false;">Jaime and Leon: age gap of 5 years, and different social circles (0:25:56)</a></li>
+                    <li><a href="#section-17" id="link-section-17-en" onclick="jumpToSection('section-17', 1611); return false;">Israel (Sulo): the prodigal son (0:26:51)</a></li>
+                    <li><a href="#section-18" id="link-section-18-en" onclick="jumpToSection('section-18', 1832); return false;">Abram's Journey from Romania to Chile, through Argentina (0:30:32)</a></li>
+                    <li><a href="#section-19" id="link-section-19-en" onclick="jumpToSection('section-19', 1887); return false;">Abram: a kind father, and modest man (0:31:27)</a></li>
+                    <li><a href="#section-20" id="link-section-20-en" onclick="jumpToSection('section-20', 1949); return false;">Working as a 'Semanalchik' in the 40s, trying to manufacture blue jeans in the 60s (0:32:29)</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Column: Transcript (toggle shown only if both languages exist) -->
+        <div id="right-column">
+            
             <div id="transcript-content">
                 <pre id="transcript-pre">
 <div id="section-0.5" class="section-anchor"></div>
@@ -991,10 +1019,12 @@ Chao, chao.
 
 <span class="speaker-eric">Eric</span> 
 <a href="#" class="timestamp" onclick="jumpToTime(2117); return false;">0:35:17</a>
-Chao. Chao.                </pre>
+Chao. Chao.
+                </pre>
             </div>
         </div>
     </div>
+
     <!-- Floating Gallery Popup -->
     <div id="gallery-popup">
         <span id="gallery-close" onclick="closeGallery()">×</span>
@@ -1008,36 +1038,45 @@ Chao. Chao.                </pre>
             </div>
         </div>
     </div>
-    <script>
-        // Global array of section images.
-        var sectionImages = {"young_ester": {"src": "images/ester_as_young_woman.jpg", "textContent": "Ester. Ester as a young woman (1926?)"}, "boarding_lisbon": {"src": "images/boarding_in_lisbon.png", "textContent": "Escaping Through Lisbon, 1939. Brana and Mina are the two young women in the third row from the front. Favel and Mane Haichelis are the couple at the top of the steps. Nune Haichelis is in the front by the child. In the second row from the front, Gregorio is on the very left and Miguel is on the very right."}, "Sprintze_Jaikles": {"src": "images/Sprintze_Jaikles.jpg", "textContent": "The matriarch. A photo of Sprintze Jaikles back in Orhei (1915?)."}, "Sprintze_Mikhael_Jaikles": {"src": "images/ShprintzeMikhael.jpg", "textContent": "Top of the Family Tree. Sprintze and Michael (Mosher) Jaikles (1915?)."}, "rosita_young_overcoat": {"src": "images/rosita_young_overcoat.png", "textContent": "Rosita. A young Rosa Greiber posing in about 1934."}, "rosita_nano_young": {"src": "images/rosita_nano_young.png", "textContent": "Rosita and Nano. The two children pose in about 1936."}, "Valparaiso": {"src": "images/ester_rosita_nano_1941_valparaiso.jpg", "textContent": "Holiday by the Beach. Ester, Rosita and Nano in Cartagena near Valparaiso, 1941"}, "ester_husband": {"src": "images/ester_and_gregorio_vugman.JPG", "textContent": "In-laws. Ester and her second husband, along with brother Gregorio and his wife (1950s?)"}, "graf_waldersee": {"src": "images/GrafWaldersee.png", "textContent": "Graf Waldersee. An illustration of the Graf Waldersee, the ship on which the Jaikles sailed from Hamburg to New York."}, "mari": {"src": "mari.jpg", "textContent": "Mari. Ester's youngest sister Mari, who stayed back in the Soviet Union. Once Mina and Uli were set up in Los Angeles, Mina was able to sponsor to her to have her and her family, including daughter Isabella, enter the US."}, "family_reunion": {"src": "images/Chile_Family_Reunion.JPG", "textContent": "A family reunion, circa 1954. This was Uli and Mina Chazanas 10th wedding anniversary; they are seated at the very front with their two boys Gregorio (Goyo) and Alex. Brana is seated next to them at the right end of that first small row, and her husband stands behind her in the glasses. Leon and Rosita are the tall couple in the back row, Leon\u2019s parents Abram Koifman and Lea (Leike) Serber are the couple right behind the man with the crossed arms, and Ester Vugman Greiber sits next to this man on his right. Thank you to Goyo Chazanas for the photo."}, "jaikles_ladies": {"src": "images/jaikles_ladies.jpg", "textContent": "Family Reunion. Seated: Sarita Jaikles (Gomberoff), Clara Motlis (Gottlieb), Jenny Fassler (Cosidoy), Ester Vugman (Greiber), Zulema Jaikles (Haichelis) \n  Standing: Brana Vugman (Bergstein), Betty Jaikles (Link), Paulina Fassler (Icekson), Olga Kusnir (Dubinosky), Mina Vugman (Chazanas), Maruca Fassler (Levy) (?)"}, "ester_mina_brana_reunion": {"src": "images/ester_mina_brana_reunion.JPG", "textContent": "Ester, Mina, Brana and their husbands."}, "jaime_motlis": {"src": "images/jaime_motlis.png", "textContent": "Jaime Motlis."}, "sprintze_cecilia_chile": {"src": "images/Sprintze_Cecilia_Chile.jpeg", "textContent": "Cecilia (Tzippe) and her family, Chile 1926. Evidently Sprintze made it to Chile to visit her daughter and son-in-law Harry Fassler"}, "vugman_grave": {"src": "images/vugmangrave.jpeg", "textContent": "Ruben and Sara's Grave in Orhei/Orgeyev. It is unclear where and when exactly they died. This grave may have been erected after Mari returned to Orgeyev from Tbilisi after the war."}, "elias_greibrer_id": {"src": "images/elias_greiber_id.png", "textContent": "Elias Greiber, father of Jose Greiber (Hernan and Rosa Greiber's grandfather). Elias Greiber\u2019s ID card in Belem, Brazil. Born 12/20/1874, white skin, blue eyes, white hair, male pattern baldness. A \u201ccavaignac\u201d might be a reference to the type of mustache he sported, as hinted by Victor Hugo\u2019s description of 1848-revolution era French General Louis-Eug\u00e8ne Cavaignac. His father Lazer\u2019s birth was recorded as taking place in Mohyliv-Podilskyi in 1844, as found on JewishGen."}, "clara_chocler_greiber_id": {"src": "images/clara_chocler_greiber_id.png", "textContent": "Clara Chocler Greiber, mother of Jose Greiber (Hernan and Rosa Greiber's grandmother). Clara Chocler Greiber\u2019s Passport, registering her journey back to Brazil through Argentina from visiting Jose and Ester in Concepcion for two months. Light brown eyes, dark brown hair, greying. She was born in Zguri\u0163a, Moldova, which is only about an hour from Mohyliv."}, "rosita_greiber_young": {"src": "images/rosita_greiber_young.png", "textContent": "Rosita Greiber."}, "rosita_nano_as_children": {"src": "images/rosita_nano_as_children.png", "textContent": "Rosa (Rosita) and Hernan (Nano) Greiber as children (~1935). This photo would have been taken in Concepcion."}, "nano_marita_leon_rosita": {"src": "images/nano_marita_leon_rosita.png", "textContent": "A night out (~1962?). From left to right: Hernan (Nano) Greiber, Gregorio (Goyo) Chazanas, Mina Vugman Chazanas, Uli Chazanas, possibly Marita, possibly Alex Chazanas, Ester Vugman, Rosa (Rosita) Koifman Greiber, Leon Koifman"}, "rosita_leon_wedding": {"src": "images/rosita_leon_wedding.png", "textContent": "Rosita Greiber and Leon Koifman's Wedding, 1955"}, "young_koifman_parents": {"src": "images/young_koifman_parents.png", "textContent": "Leon and Rosita Koifman as young parents (~1956-57). Leon and Rosita Koifman and two of their three children."}, "koifman_family_outing": {"src": "images/koifman_family_outing.png", "textContent": "Koifman family (~1966). Leon and Rosita Koifman and their three children, Jose-Luis, Roberto and Jocelyn."}, "harry_fassler_and_cecilia_young": {"src": "images/harry_fassler_and_cecilia_young.png", "textContent": "Cecilia (Tzippe) Jaikles and Harry Fassler"}, "baby_leon_with_parents": {"src": "images/baby_leon_with_parents.png", "textContent": "Leon Koifman as a child with Abram Koifman and Lea Serber (1929?)"}, "natalio_berman": {"src": "images/Natalio_Berman.jpeg", "textContent": "Natalio Berman (1908-1957). M\u00e9dico cirujano, salubrista, escritor y pol\u00edtico de la Nueva Acci\u00f3n P\u00fablica, del Partido Socialista de Chile, del Partido Socialista de Trabajadores y del Partido Comunista de Chile."}, "chillan_earthquake": {"src": "images/chillan_earthquake.jpeg", "textContent": "Chillan Earthquake, 1939"}, "sara_and_ruben": {"src": "images/sara_and_ruben.jpeg", "textContent": "Sarah, Ruben, Gregorio and Ester (~1912)"}, "union_israelita": {"src": "images/union_israelita.png", "textContent": "Documents from the founding of La Union Israelita en Chile, August 8th, 1909. Aron Jaikles is visible on the first column of the second page. Miguel Berdichevski, who Jaime Motlis had remembered as figuring prominently in the story of Aron\u2019s arrival, is listed on the second column of the first page."}, "santiago_1930": {"src": "images/santiago_1930.jpeg", "textContent": "Santiago in 1930 (https://upload.wikimedia.org/wikipedia/commons/8/8b/Santiago_de_Chile_1930.jpg)"}, "isla_dawson": {"src": "images/isla_dawson_lawner_drawing.png", "textContent": "Drawing of Isla Dawson. The architect Miguel Lawner was imprisoned at isla Dawson, and sketched from memory a series of drawings depicting the detention center and concentration camp at which he was held."}, "alberto_spoerer": {"src": "images/alberto_spoerer.png", "textContent": "Persecution of doctors sympathetic to Allende, 1974. This times clipping demonstrates the extent to which the new Pinochet government persecuted anybody perceived to have contributed to the 'Marxist' cause"}, "estadio_nacional": {"src": "images/estadio_nacional.png", "textContent": "Estadio Nacional, 1973. Political prisoners supervised by military guards in the stadium after the coup."}, "estadio_nacional_students": {"src": "images/estadio_nacional_students.png", "textContent": "Political prisoners in the Estadio Nacional, 1973. Evandro Teixiera, a Brazilian correspondent with the Jornal do Brasil, was able to evade military escort supervision to take this photo and expose the dark realities of the Estadio Nacional. https://www.latercera.com/culto/2023/09/01/el-brasileno-que-desafio-a-la-dictadura-para-fotografiar-la-moneda-destruida-y-los-presos-del-estadio-nacional/"}};
-        var mainPoints = [{"id": "section-0.5", "title": "Musical Introduction/ Introduccion Musical", "start_time": 0, "display_time": "0:00:00", "image": "baby_leon_with_parents"}, {"id": "section-1", "title": "Maternal family (Lea/Leike's roots), Clara Shkolnik and Isaac Serber", "subtitle": "They had a vegetable stand near Odessa", "start_time": 19, "display_time": "0:00:19", "image": "baby_leon_with_parents"}, {"id": "section-2", "title": "Abram Coifman's roots in Romania", "subtitle": "Worked with the volunteer fire brigade", "start_time": 134, "display_time": "0:02:14", "image": "baby_leon_with_parents"}, {"id": "section-3", "title": "Abram and Leike meet in Chile in 1926", "subtitle": "", "start_time": 258, "display_time": "0:04:18", "image": "baby_leon_with_parents"}, {"id": "section-4", "title": "Leike's sister Ester's family with Elias Busell", "subtitle": "Jacobo, Julio and Marcos were there children.", "start_time": 308, "display_time": "0:05:08", "image": "baby_leon_with_parents"}, {"id": "section-5", "title": "The Koifman brothers: Leon, Jaime, and Israel", "subtitle": "", "start_time": 403, "display_time": "0:06:43", "image": "baby_leon_with_parents"}, {"id": "section-6", "title": "The holidays and schul: Yom Kippur and Pesach at the Beneverit", "subtitle": "", "start_time": 577, "display_time": "0:09:36", "image": "baby_leon_with_parents"}, {"id": "section-7", "title": "None of us were Kosher! Except Abram's parents...", "subtitle": "", "start_time": 745, "display_time": "0:12:27", "image": "baby_leon_with_parents"}, {"id": "section-9", "title": "Abram's sister in Haifa.", "subtitle": "", "start_time": 829, "display_time": "0:13:49", "image": "baby_leon_with_parents"}, {"id": "section-10", "title": "Leike's brother Moises and Moises' daughter Frida.", "subtitle": "", "start_time": 924, "display_time": "0:15:24", "image": "baby_leon_with_parents"}, {"id": "section-11", "title": "Leon and Jaime's brother Israel, world traveler -- 'pata de perro'", "subtitle": "", "start_time": 1106, "display_time": "0:18:26", "image": "baby_leon_with_parents"}, {"id": "section-12", "title": "Holidays and gatherings at grandma Clara's", "subtitle": "", "start_time": 1183, "display_time": "0:19:43", "image": "baby_leon_with_parents"}, {"id": "section-13", "title": "I was always a bit chubbier", "subtitle": "", "start_time": 1253, "display_time": "0:20:53", "image": "baby_leon_with_parents"}, {"id": "section-14", "title": "Leike was a very protective mother", "subtitle": "", "start_time": 1371, "display_time": "0:22:51", "image": "baby_leon_with_parents"}, {"id": "section-15", "title": "Kissen mein tuchus!", "subtitle": "", "start_time": 1414, "display_time": "0:23:34", "image": "baby_leon_with_parents"}, {"id": "section-16", "title": "Jaime and Leon: age gap of 5 years, and different social circles", "subtitle": "", "start_time": 1556, "display_time": "0:25:56", "image": "baby_leon_with_parents"}, {"id": "section-17", "title": "Israel (Sulo): the prodigal son", "subtitle": "", "start_time": 1611, "display_time": "0:26:51", "image": "baby_leon_with_parents"}, {"id": "section-18", "title": "Abram's Journey from Romania to Chile, through Argentina", "subtitle": "", "start_time": 1832, "display_time": "0:30:32", "image": "baby_leon_with_parents"}, {"id": "section-19", "title": "Abram: a kind father, and modest man", "subtitle": "", "start_time": 1887, "display_time": "0:31:27", "image": "baby_leon_with_parents"}, {"id": "section-20", "title": "Working as a 'Semanalchik' in the 40s, trying to manufacture blue jeans in the 60s", "subtitle": "", "start_time": 1949, "display_time": "0:32:29", "image": "baby_leon_with_parents"}];
 
-        // Update TOC: Highlight current section and scroll it into view if needed.
+    <script>
+        // Global arrays/objects
+        var sectionImages = {"young_ester": {"src": "images/ester_as_young_woman.jpg", "textContent": "Ester. Ester as a young woman (1926?)"}, "boarding_lisbon": {"src": "images/boarding_in_lisbon.png", "textContent": "Escaping Through Lisbon, 1939. Brana and Mina are the two young women in the third row from the front. Favel and Mane Haichelis are the couple at the top of the steps. Nune Haichelis is in the front by the child. In the second row from the front, Gregorio is on the very left and Miguel is on the very right."}, "Sprintze_Jaikles": {"src": "images/Sprintze_Jaikles.jpg", "textContent": "The matriarch. A photo of Sprintze Jaikles back in Orhei (1915?)."}, "Sprintze_Mikhael_Jaikles": {"src": "images/ShprintzeMikhael.jpg", "textContent": "Top of the Family Tree. Sprintze and Michael (Mosher) Jaikles (1915?)."}, "rosita_young_overcoat": {"src": "images/rosita_young_overcoat.png", "textContent": "Rosita. A young Rosa Greiber posing in about 1934."}, "rosita_nano_young": {"src": "images/rosita_nano_young.png", "textContent": "Rosita and Nano. The two children pose in about 1936."}, "Valparaiso": {"src": "images/ester_rosita_nano_1941_valparaiso.jpg", "textContent": "Holiday by the Beach. Ester, Rosita and Nano in Cartagena near Valparaiso, 1941"}, "ester_husband": {"src": "images/ester_and_gregorio_vugman.JPG", "textContent": "In-laws. Ester and her second husband, along with brother Gregorio and his wife (1950s?)"}, "graf_waldersee": {"src": "images/GrafWaldersee.png", "textContent": "Graf Waldersee. An illustration of the Graf Waldersee, the ship on which the Jaikles sailed from Hamburg to New York."}, "ship_manifest": {"src": "images/ship_manifest.png", "textContent": "Passenger records for the Jaikles' Hamburg-New York journey. They are listed at the bottom, as Mosher/Mocher, Sprinse, Zipe, Paje, and Bine Chaikilis. You can see on the right-hand columns that the women of the group are listed as \u201cSchneiderin,\u201d or seamstresses, while Mocher is listed as \u201cH\u00e4ndler,\u201d or merchant. Their hometown is listed as Telenesh, Russia."}, "mari": {"src": "mari.jpg", "textContent": "Mari. Ester's youngest sister Mari, who stayed back in the Soviet Union. Once Mina and Uli were set up in Los Angeles, Mina was able to sponsor to her to have her and her family, including daughter Isabella, enter the US."}, "family_reunion": {"src": "images/Chile_Family_Reunion.JPG", "textContent": "A family reunion, circa 1954. This was Uli and Mina Chazanas 10th wedding anniversary; they are seated at the very front with their two boys Gregorio (Goyo) and Alex. Brana is seated next to them at the right end of that first small row, and her husband stands behind her in the glasses. Leon and Rosita are the tall couple in the back row, Leon\u2019s parents Abram Koifman and Lea (Leike) Serber are the couple right behind the man with the crossed arms, and Ester Vugman Greiber sits next to this man on his right. Thank you to Goyo Chazanas for the photo."}, "jaikles_ladies": {"src": "images/jaikles_ladies.jpg", "textContent": "Family Reunion. Seated: Sarita Jaikles (Gomberoff), Clara Motlis (Gottlieb), Jenny Fassler (Cosidoy), Ester Vugman (Greiber), Zulema Jaikles (Haichelis) \n  Standing: Brana Vugman (Bergstein), Betty Jaikles (Link), Paulina Fassler (Icekson), Olga Kusnir (Dubinosky), Mina Vugman (Chazanas), Maruca Fassler (Levy) (?)"}, "ester_mina_brana_reunion": {"src": "images/ester_mina_brana_reunion.JPG", "textContent": "Ester, Mina, Brana and their husbands."}, "jaime_motlis": {"src": "images/jaime_motlis.png", "textContent": "Jaime Motlis."}, "sprintze_cecilia_chile": {"src": "images/Sprintze_Cecilia_Chile.jpeg", "textContent": "Cecilia (Tzippe) and her family, Chile 1926. Evidently Sprintze made it to Chile to visit her daughter and son-in-law Harry Fassler"}, "vugman_grave": {"src": "images/vugmangrave.jpeg", "textContent": "Ruben and Sara's Grave in Orhei/Orgeyev. It is unclear where and when exactly they died. This grave may have been erected after Mari returned to Orgeyev from Tbilisi after the war."}, "elias_greibrer_id": {"src": "images/elias_greiber_id.png", "textContent": "Elias Greiber, father of Jose Greiber (Hernan and Rosa Greiber's grandfather). Elias Greiber\u2019s ID card in Belem, Brazil. Born 12/20/1874, white skin, blue eyes, white hair, male pattern baldness. A \u201ccavaignac\u201d might be a reference to the type of mustache he sported, as hinted by Victor Hugo\u2019s description of 1848-revolution era French General Louis-Eug\u00e8ne Cavaignac. His father Lazer\u2019s birth was recorded as taking place in Mohyliv-Podilskyi in 1844, as found on JewishGen."}, "clara_chocler_greiber_id": {"src": "images/clara_chocler_greiber_id.png", "textContent": "Clara Chocler Greiber, mother of Jose Greiber (Hernan and Rosa Greiber's grandmother). Clara Chocler Greiber\u2019s Passport, registering her journey back to Brazil through Argentina from visiting Jose and Ester in Concepcion for two months. Light brown eyes, dark brown hair, greying. She was born in Zguri\u0163a, Moldova, which is only about an hour from Mohyliv."}, "rosita_greiber_young": {"src": "images/rosita_greiber_young.png", "textContent": "Rosita Greiber."}, "rosita_nano_as_children": {"src": "images/rosita_nano_as_children.png", "textContent": "Rosa (Rosita) and Hernan (Nano) Greiber as children (~1935). This photo would have been taken in Concepcion."}, "nano_marita_leon_rosita": {"src": "images/nano_marita_leon_rosita.png", "textContent": "A night out (~1962?). From left to right: Hernan (Nano) Greiber, Gregorio (Goyo) Chazanas, Mina Vugman Chazanas, Uli Chazanas, possibly Marita, possibly Alex Chazanas, Ester Vugman, Rosa (Rosita) Koifman Greiber, Leon Koifman"}, "rosita_leon_wedding": {"src": "images/rosita_leon_wedding.png", "textContent": "Rosita Greiber and Leon Koifman's Wedding, 1955"}, "young_koifman_parents": {"src": "images/young_koifman_parents.png", "textContent": "Leon and Rosita Koifman as young parents (~1956-57). Leon and Rosita Koifman and two of their three children."}, "koifman_family_outing": {"src": "images/koifman_family_outing.png", "textContent": "Koifman family (~1966). Leon and Rosita Koifman and their three children, Jose-Luis, Roberto and Jocelyn."}, "harry_fassler_and_cecilia_young": {"src": "images/harry_fassler_and_cecilia_young.png", "textContent": "Cecilia (Tzippe) Jaikles and Harry Fassler"}, "baby_leon_with_parents": {"src": "images/baby_leon_with_parents.png", "textContent": "Leon Koifman as a child with Abram Koifman and Lea Serber (1929?)"}, "natalio_berman": {"src": "images/Natalio_Berman.jpeg", "textContent": "Natalio Berman (1908-1957). M\u00e9dico cirujano, salubrista, escritor y pol\u00edtico de la Nueva Acci\u00f3n P\u00fablica, del Partido Socialista de Chile, del Partido Socialista de Trabajadores y del Partido Comunista de Chile."}, "chillan_earthquake": {"src": "images/chillan_earthquake.jpeg", "textContent": "Chillan Earthquake, 1939"}, "sara_and_ruben": {"src": "images/sara_and_ruben.jpeg", "textContent": "Sarah, Ruben, Gregorio and Ester (~1912)"}, "union_israelita": {"src": "images/union_israelita.png", "textContent": "Documents from the founding of La Union Israelita en Chile, August 8th, 1909. Aron Jaikles is visible on the first column of the second page. Miguel Berdichevski, who Jaime Motlis had remembered as figuring prominently in the story of Aron\u2019s arrival, is listed on the second column of the first page."}, "santiago_1930": {"src": "images/santiago_1930.jpeg", "textContent": "Santiago in 1930 (https://upload.wikimedia.org/wikipedia/commons/8/8b/Santiago_de_Chile_1930.jpg)"}, "isla_dawson": {"src": "images/isla_dawson_lawner_drawing.png", "textContent": "Drawing of Isla Dawson. The architect Miguel Lawner was imprisoned at isla Dawson, and sketched from memory a series of drawings depicting the detention center and concentration camp at which he was held."}, "alberto_spoerer": {"src": "images/alberto_spoerer.png", "textContent": "Persecution of doctors sympathetic to Allende, 1974. This times clipping demonstrates the extent to which the new Pinochet government persecuted anybody perceived to have contributed to the 'Marxist' cause"}, "estadio_nacional": {"src": "images/estadio_nacional.png", "textContent": "Estadio Nacional, 1973. Political prisoners supervised by military guards in the stadium after the coup."}, "estadio_nacional_students": {"src": "images/estadio_nacional_students.png", "textContent": "Political prisoners in the Estadio Nacional, 1973. Evandro Teixiera, a Brazilian correspondent with the Jornal do Brasil, was able to evade military escort supervision to take this photo and expose the dark realities of the Estadio Nacional. https://www.latercera.com/culto/2023/09/01/el-brasileno-que-desafio-a-la-dictadura-para-fotografiar-la-moneda-destruida-y-los-presos-del-estadio-nacional/"}};
+        var mainPointsEn = [{"id": "section-0.5", "title": "Musical Introduction/ Introduccion Musical", "start_time": 0, "display_time": "0:00:00", "image": "baby_leon_with_parents"}, {"id": "section-1", "title": "Maternal family (Lea/Leike's roots), Clara Shkolnik and Isaac Serber", "subtitle": "They had a vegetable stand near Odessa", "start_time": 19, "display_time": "0:00:19", "image": "baby_leon_with_parents"}, {"id": "section-2", "title": "Abram Coifman's roots in Romania", "subtitle": "Worked with the volunteer fire brigade", "start_time": 134, "display_time": "0:02:14", "image": "baby_leon_with_parents"}, {"id": "section-3", "title": "Abram and Leike meet in Chile in 1926", "subtitle": "", "start_time": 258, "display_time": "0:04:18", "image": "baby_leon_with_parents"}, {"id": "section-4", "title": "Leike's sister Ester's family with Elias Busell", "subtitle": "Jacobo, Julio and Marcos were there children.", "start_time": 308, "display_time": "0:05:08", "image": "baby_leon_with_parents"}, {"id": "section-5", "title": "The Koifman brothers: Leon, Jaime, and Israel", "subtitle": "", "start_time": 403, "display_time": "0:06:43", "image": "baby_leon_with_parents"}, {"id": "section-6", "title": "The holidays and schul: Yom Kippur and Pesach at the Beneverit", "subtitle": "", "start_time": 577, "display_time": "0:09:36", "image": "baby_leon_with_parents"}, {"id": "section-7", "title": "None of us were Kosher! Except Abram's parents...", "subtitle": "", "start_time": 745, "display_time": "0:12:27", "image": "baby_leon_with_parents"}, {"id": "section-9", "title": "Abram's sister in Haifa.", "subtitle": "", "start_time": 829, "display_time": "0:13:49", "image": "baby_leon_with_parents"}, {"id": "section-10", "title": "Leike's brother Moises and Moises' daughter Frida.", "subtitle": "", "start_time": 924, "display_time": "0:15:24", "image": "baby_leon_with_parents"}, {"id": "section-11", "title": "Leon and Jaime's brother Israel, world traveler -- 'pata de perro'", "subtitle": "", "start_time": 1106, "display_time": "0:18:26", "image": "baby_leon_with_parents"}, {"id": "section-12", "title": "Holidays and gatherings at grandma Clara's", "subtitle": "", "start_time": 1183, "display_time": "0:19:43", "image": "baby_leon_with_parents"}, {"id": "section-13", "title": "I was always a bit chubbier", "subtitle": "", "start_time": 1253, "display_time": "0:20:53", "image": "baby_leon_with_parents"}, {"id": "section-14", "title": "Leike was a very protective mother", "subtitle": "", "start_time": 1371, "display_time": "0:22:51", "image": "baby_leon_with_parents"}, {"id": "section-15", "title": "kush meyn tokhes!", "subtitle": "", "start_time": 1414, "display_time": "0:23:34", "image": "baby_leon_with_parents"}, {"id": "section-16", "title": "Jaime and Leon: age gap of 5 years, and different social circles", "subtitle": "", "start_time": 1556, "display_time": "0:25:56", "image": "baby_leon_with_parents"}, {"id": "section-17", "title": "Israel (Sulo): the prodigal son", "subtitle": "", "start_time": 1611, "display_time": "0:26:51", "image": "baby_leon_with_parents"}, {"id": "section-18", "title": "Abram's Journey from Romania to Chile, through Argentina", "subtitle": "", "start_time": 1832, "display_time": "0:30:32", "image": "baby_leon_with_parents"}, {"id": "section-19", "title": "Abram: a kind father, and modest man", "subtitle": "", "start_time": 1887, "display_time": "0:31:27", "image": "baby_leon_with_parents"}, {"id": "section-20", "title": "Working as a 'Semanalchik' in the 40s, trying to manufacture blue jeans in the 60s", "subtitle": "", "start_time": 1949, "display_time": "0:32:29", "image": "baby_leon_with_parents"}];
+        var mainPointsEs = [{"id": "section-0.5", "title": "Introducci\u00f3n musical", "start_time": 0, "display_time": "0:00:00", "image": "baby_leon_with_parents"}, {"id": "section-1", "title": "Familia materna (ra\u00edces de Lea/Leike), Clara Shkolnik e Isaac Serber", "subtitle": "Ten\u00edan un puesto de verduras cerca de Odesa", "start_time": 19, "display_time": "0:00:19", "image": "baby_leon_with_parents"}, {"id": "section-2", "title": "Or\u00edgenes de Abram Coifman en Rumania", "subtitle": "Trabajaba con la brigada de bomberos voluntarios", "start_time": 134, "display_time": "0:02:14", "image": "baby_leon_with_parents"}, {"id": "section-3", "title": "Abram y Leike se conocen en Chile en 1926", "subtitle": "", "start_time": 258, "display_time": "0:04:18", "image": "baby_leon_with_parents"}, {"id": "section-4", "title": "La familia de Ester, hermana de Leike, con El\u00edas Busell", "subtitle": "Jacobo, Julio y Marcos eran sus hijos.", "start_time": 308, "display_time": "0:05:08", "image": "baby_leon_with_parents"}, {"id": "section-5", "title": "Los hermanos Koifman: Le\u00f3n, Jaime e Israel", "subtitle": "", "start_time": 403, "display_time": "0:06:43", "image": "baby_leon_with_parents"}, {"id": "section-6", "title": "Las fiestas y el shul: Yom Kipur y Pesaj en el Benivrit", "subtitle": "", "start_time": 577, "display_time": "0:09:36", "image": "baby_leon_with_parents"}, {"id": "section-7", "title": "\u00a1Ninguno de nosotros era kosher! Excepto los padres de Abram...", "subtitle": "", "start_time": 745, "display_time": "0:12:27", "image": "baby_leon_with_parents"}, {"id": "section-9", "title": "La hermana de Abram en Haifa.", "subtitle": "", "start_time": 829, "display_time": "0:13:49", "image": "baby_leon_with_parents"}, {"id": "section-10", "title": "El hermano de Leike, Mois\u00e9s, y la hija de Mois\u00e9s, Frida.", "subtitle": "", "start_time": 924, "display_time": "0:15:24", "image": "baby_leon_with_parents"}, {"id": "section-11", "title": "El hermano de Le\u00f3n y Jaime, Israel, siempre viajando \u2014 'pata de perro'", "subtitle": "", "start_time": 1106, "display_time": "0:18:26", "image": "baby_leon_with_parents"}, {"id": "section-12", "title": "Fiestas y reuniones en casa de la abuela Clara", "subtitle": "", "start_time": 1183, "display_time": "0:19:43", "image": "baby_leon_with_parents"}, {"id": "section-13", "title": "Yo siempre fui un poco m\u00e1s gordito", "subtitle": "", "start_time": 1253, "display_time": "0:20:53", "image": "baby_leon_with_parents"}, {"id": "section-14", "title": "Leike era una madre muy protectora", "subtitle": "", "start_time": 1371, "display_time": "0:22:51", "image": "baby_leon_with_parents"}, {"id": "section-15", "title": "\u00a1kush meyn tokhes!", "subtitle": "", "start_time": 1414, "display_time": "0:23:34", "image": "baby_leon_with_parents"}, {"id": "section-16", "title": "Jaime y Le\u00f3n: diferencia de edad de 5 a\u00f1os y distintos c\u00edrculos sociales", "subtitle": "", "start_time": 1556, "display_time": "0:25:56", "image": "baby_leon_with_parents"}, {"id": "section-17", "title": "Israel (Sulo): el hijo pr\u00f3digo", "subtitle": "", "start_time": 1611, "display_time": "0:26:51", "image": "baby_leon_with_parents"}, {"id": "section-18", "title": "El viaje de Abram de Rumania a Chile, pasando por Argentina", "subtitle": "", "start_time": 1832, "display_time": "0:30:32", "image": "baby_leon_with_parents"}, {"id": "section-19", "title": "Abram: un padre amable y un hombre modesto", "subtitle": "", "start_time": 1887, "display_time": "0:31:27", "image": "baby_leon_with_parents"}, {"id": "section-20", "title": "Trabajando como 'semanalchik' en los 40, intentando fabricar blue jeans en los 60", "subtitle": "", "start_time": 1949, "display_time": "0:32:29", "image": "baby_leon_with_parents"}];
+
+        // Update TOC: highlight current section in whichever TOC is visible
         function updateToc() {
-            var tocContainer = document.getElementById("toc-container");
-            for (var i = 0; i < mainPoints.length; i++) {
-                var section_id = mainPoints[i].id;
-                var tocEntry = document.getElementById("link-" + section_id);
-                if (section_id === currentSectionId) {
-                    tocEntry.style.color = "black";
-                    var containerRect = tocContainer.getBoundingClientRect();
-                    var entryRect = tocEntry.getBoundingClientRect();
-                    if (entryRect.top < containerRect.top || entryRect.bottom > containerRect.bottom) {
-                        tocEntry.scrollIntoView({ behavior: "smooth", block: "nearest" });
+            var currentLang = document.getElementById("toc-es").style.display === "none" ? "en" : "es";
+            var points = (currentLang === "en") ? mainPointsEn : mainPointsEs;
+            var prefix = (currentLang === "en") ? "-en" : "-es";
+            var containerId = (currentLang === "en") ? "toc-en" : "toc-es";
+            var tocContainer = document.getElementById(containerId);
+
+            points.forEach(function(pt) {
+                var entry = document.getElementById("link-" + pt.id + prefix);
+                if (entry) {
+                    if (pt.id === currentSectionId) {
+                        entry.style.color = "black";
+                        var containerRect = tocContainer.getBoundingClientRect();
+                        var entryRect = entry.getBoundingClientRect();
+                        if (entryRect.top < containerRect.top || entryRect.bottom > containerRect.bottom) {
+                            entry.scrollIntoView({ behavior: "smooth", block: "nearest" });
+                        }
+                    } else {
+                        entry.style.color = "gray";
                     }
-                } else {
-                    tocEntry.style.color = "gray";
                 }
-            }
+            });
         }
 
-        // Helper function to update the full gallery image (only if the section has an image).
+        // Helper: update the gallery-full image
         function updateGalleryImage(sectionId) {
-            var point = mainPoints.find(function(pt) { return pt.id === sectionId; });
+            var pointEs = mainPointsEs.find(function(pt) { return pt.id === sectionId; });
+            var pointEn = mainPointsEn.find(function(pt) { return pt.id === sectionId; });
+            var point = pointEs || pointEn;
             if (point && point.hasOwnProperty("image") && sectionImages.hasOwnProperty(point.image)) {
                 document.getElementById("gallery-full").src = sectionImages[point.image].src;
-                // Extract title from textContent (text before first period)
                 var fullText = sectionImages[point.image].textContent;
                 var titleText = fullText.split(".")[0];
                 document.getElementById("gallery-full-title").textContent = titleText;
@@ -1045,12 +1084,20 @@ Chao. Chao.                </pre>
             }
         }
 
-        // Functions for manual image navigation in the main page.
+        // Next/Prev image on main page
         function prevImage() {
-            // Loop backwards to find previous section with image.
-            for (var i = mainPoints.length - 1; i >= 0; i--) {
-                if (mainPoints[i].hasOwnProperty("image") && mainPoints[i].id < currentSectionId) {
-                    currentSectionId = mainPoints[i].id;
+            var combined = mainPointsEn.concat(mainPointsEs);
+            var seen = new Set();
+            var merged = [];
+            combined.forEach(function(pt) {
+                if (!seen.has(pt.id)) {
+                    seen.add(pt.id);
+                    merged.push(pt);
+                }
+            });
+            for (var i = merged.length - 1; i >= 0; i--) {
+                if (merged[i].hasOwnProperty("image") && merged[i].id < currentSectionId) {
+                    currentSectionId = merged[i].id;
                     updateImageForSection(currentSectionId);
                     updateToc();
                     return;
@@ -1059,10 +1106,18 @@ Chao. Chao.                </pre>
         }
 
         function nextImage() {
-            // Loop forwards to find next section with image.
-            for (var i = 0; i < mainPoints.length; i++) {
-                if (mainPoints[i].hasOwnProperty("image") && mainPoints[i].id > currentSectionId) {
-                    currentSectionId = mainPoints[i].id;
+            var combined = mainPointsEn.concat(mainPointsEs);
+            var seen = new Set();
+            var merged = [];
+            combined.forEach(function(pt) {
+                if (!seen.has(pt.id)) {
+                    seen.add(pt.id);
+                    merged.push(pt);
+                }
+            });
+            for (var i = 0; i < merged.length; i++) {
+                if (merged[i].hasOwnProperty("image") && merged[i].id > currentSectionId) {
+                    currentSectionId = merged[i].id;
                     updateImageForSection(currentSectionId);
                     updateToc();
                     return;
@@ -1070,32 +1125,45 @@ Chao. Chao.                </pre>
             }
         }
 
-        // Update the main page image and subtitle based on the current section.
         function updateImageForSection(sectionId) {
-            var point = mainPoints.find(function(pt) { return pt.id === sectionId; });
+            var pointEs = mainPointsEs.find(function(pt) { return pt.id === sectionId; });
+            var pointEn = mainPointsEn.find(function(pt) { return pt.id === sectionId; });
+            var point = pointEs || pointEn;
             if (point && point.hasOwnProperty("image") && sectionImages.hasOwnProperty(point.image)) {
                 document.getElementById("current-image").src = sectionImages[point.image].src;
                 document.getElementById("image-subtitle").textContent = sectionImages[point.image].textContent;
             }
         }
 
-        // Transcript toggle logic.
+        // TOC toggle logic
+        function showToc(lang) {
+            if (lang === "english") {
+                document.getElementById("toc-en").style.display = "block";
+                document.getElementById("toc-es").style.display = "none";
+            } else {
+                document.getElementById("toc-en").style.display = "none";
+                document.getElementById("toc-es").style.display = "block";
+            }
+            updateToc();
+        }
+
+        // Transcript toggle logic (only if both exist)
         var transcriptPre = document.getElementById("transcript-pre");
         var transcriptEnglish = "";
         var transcriptSpanish = "<div id=\"section-0.5\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(0); return false;\">0:00:00</a>\nMusical Introduction / Introduccion Musical\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-1\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(19); return false;\">0:00:19</a>\nYa, entonces me largo. La historia... La historia comienza en Rusia.\n\nEn un pueblo que no s\u00e9 el nombre, pero vecino a Odessa, donde mis abuelos maternos, Clara Shkolnik e Isaac Serber, se casaron. Ellos ten\u00edan ah\u00ed una especie de verduler\u00eda y ah\u00ed estuvieron todo el tiempo. El abuelo, Isaac Serber, se vino a Chile aproximadamente el a\u00f1o 1914 y dej\u00f3 a la familia en Rusia.\n\nLa fue a buscar el a\u00f1o 18 y ellos se vinieron el a\u00f1o 19 a Chile. En barco, l\u00f3gicamente. Barco hasta Buenos Aires y tren de Buenos Aires ac\u00e1.\n\nLos hijos eran, por orden de edad, lo que para m\u00ed son t\u00eda, la t\u00eda Esther, mi mam\u00e1, de nombre Leike, el t\u00edo Mois\u00e9s, el t\u00edo Jos\u00e9, el t\u00edo Israel. Ellos constitu\u00edan toda la familia por ese lado. Ya una vez en Chile, el abuelo se dedic\u00f3 b\u00e1sicamente a construcci\u00f3n o algo as\u00ed de viviendas modestas y con eso se manten\u00eda.\n\n<span class=\"speaker-jaime\">Jaime</span>\n<div id=\"section-2\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(134); return false;\">0:02:14</a>\nLa parte de mi padre. Mi padre viene de Rumania. Abraham Coifman viene de Rumania, de un pueblo vecino a la capital de Besarabia y \u00e9l se vino solo a Chile cuando le toc\u00f3 hacer el servicio militar all\u00e1 que era terrible, sobre todo para los jud\u00edos.\n\nEl primero, la parte anecd\u00f3tica, se hab\u00eda metido al cuerpo de bomberos all\u00e1 en que ellos mismos ten\u00edan que tirar la bomba porque todav\u00eda no hab\u00eda motores para la bomba hasta que aproximadamente, por all\u00e1 por los a\u00f1os tambi\u00e9n, en 1917 o 18 se vino para Chile donde conoci\u00f3 a la mam\u00e1, Leike, L\u00eda en espa\u00f1ol. Ya te di los otros nombres que quedaron de los hermanos o te lo repito. \u00bfTe lo repito?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(211); return false;\">0:03:31</a>\nEster, Lea, Mois\u00e9s, Jos\u00e9 e Isrul.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(216); return false;\">0:03:36</a>\nExacto. De todos ellos, todos se casaron menos Isrul. Isrul vivi\u00f3 soltero toda su vida y falleci\u00f3 por ah\u00ed por el a\u00f1o 1962 aproximadamente.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(237); return false;\">0:03:57</a>\n\u00bfY por qu\u00e9 no se cas\u00f3? \u00bfC\u00f3mo que no era muy social no m\u00e1s? \n\n<span class=\"speaker-jaime\">Jaime</span>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(242); return false;\">0:04:02</a>\nNo, era demasiado social creo yo.\n\n<span class=\"speaker-ruby\">Ruby</span>\nEl trabaj\u00f3 con mi pap\u00e1.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(246); return false;\">0:04:06</a>\n\u00bfIsrul?\n\n<span class=\"speaker-jaime\">Jaime</span>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(250); return false;\">0:04:10</a>\nNo, estoy confundido...\n\n<span class=\"speaker-eric\">Eric</span> \n\u00bfPuras pololas? Nunca mujeres, nunca esposas.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-3\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(258); return false;\">0:04:18</a>\nLa otra parte, entonces, te dije d\u00f3nde naci\u00f3 mi padre, d\u00f3nde naci\u00f3 mi madre. Se conocieron ac\u00e1 en Santiago y se casaron aproximadamente el a\u00f1o 1926. \n\nLe\u00f3n creo que naci\u00f3 en 1927. Me parece que es el a\u00f1o de su nacimiento. \n\nAhora para relacionarte los nombres de los casamientos que se produjeron, que no s\u00e9 si realmente te interesa o nos va a quedar un poquito para la historia. Van por orden de edad.\n\n<span class=\"speaker-jaime\">Jaime</span>\n<div id=\"section-4\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(308); return false;\">0:05:08</a>\nLa t\u00eda Ester se cas\u00f3 con Jacobo Busell y tuvieron tres hijos. \n\n<span class=\"speaker-ruby\">Ruby</span>\n\u00bfEl hijo se llamaba Jacobo? \n\n<span class=\"speaker-jaime\">Jaime</span>\n\u00bfJacobo? No, perd\u00f3n. \n\n<span class=\"speaker-ruby\">Ruby</span>\nEl marido no se llamaba Jacobo. \n\n<span class=\"speaker-jaime\">Jaime</span>\nAh no, me equivoqu\u00e9 ah\u00ed.\n\nEl marido se llamaba El\u00edas. \n\n<span class=\"speaker-eric\">Eric</span>\n\u00bfEl\u00edas Busell? \n\n<span class=\"speaker-jaime\">Jaime</span>\nEl\u00edas Busell. Y tuvieron tres hijos. Jacobo, Julio y Marcos. Jacobo se cas\u00f3 con Raquel Zimmerman. Con \"Z\". Julio se cas\u00f3 con Adela. No me acuerdo el apellido.\n\nY Marcos se cas\u00f3 con Alegre. Esos eran los tres matrimonios. \n\nMi padre, la Leike-- Leike en castellano se llamaba L\u00eda, pero todo el mundo le dec\u00eda Leike--  casada con Abr\u00e1m. Tuvieron tres hijos. \n\n<span class=\"speaker-jaime\">Jaime</span>\n<div id=\"section-5\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(403); return false;\">0:06:43</a>\nLe\u00f3n, que se cas\u00f3 con La Rosita. Jaime, el que habla, que se cas\u00f3 con Ruby Link. Mucho gusto.\n\nY Israel, que se cas\u00f3 con una ni\u00f1a, Irma. \n\nAhora, de estos tres que te acabo de mencionar, el \u00fanico que est\u00e1 vivo soy yo. \n\nLe\u00f3n muri\u00f3 hace unos cuatro a\u00f1os y Israel muri\u00f3 hace unos cinco a\u00f1os.\n\u00bfLe agrego los nombres de los hijos? \u00bfTe interesa? S\u00ed, porque t\u00fa los conoces algunos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(460); return false;\">0:07:40</a>\nYo conozco a... Bueno, los \u00fanicos que no conozco son los de Zulo, los de Israel. \u00bf\u00c9l ten\u00eda solo una hija o m\u00e1s de una?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(469); return false;\">0:07:49</a>\nLa Daniela, nada m\u00e1s. Zulo tuvo solamente a la Daniela. La Daniela se cas\u00f3 y tuvo tres hijos.\n\nEl marido se divorci\u00f3. Ella es abogada y trabaja en un banco, el Banco de Cr\u00e9dito de Inversiones. Es c\u00f3mico, pero es un banco \u00e1rabe.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(501); return false;\">0:08:21</a>\n\u00bfPuede ser que ellos descubran la soluci\u00f3n para paz en el Medio Oriente?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(510); return false;\">0:08:30</a>\nPodr\u00eda ser. Ya, despu\u00e9s de la... Ah\u00ed vendr\u00eda la parte de la familia m\u00eda.\n\nCreo que la conoces. Estoy casado con Rubi y tuvimos, o tenemos, dos mujeres. A D\u00e9bora y a Karen.\n\n<span class=\"speaker-ruby\">Ruby</span>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(569); return false;\">0:09:29</a>\nNo. \n\n<span class=\"speaker-jaime\">Jaime</span>\n\u00bfNo?\n\n<span class=\"speaker-ruby\">Ruby</span>\nNo, nada de eso!\n\n<span class=\"speaker-jaime\">Jaime</span>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(576); return false;\">0:09:36</a>\nMira, seguimos las festividades grandes. En Yom Kippur vamos al Schul, generalmente.\n\nPara Pesach comemos matzah, pero religiosos no somos. Vamos al Schul cuando hay alg\u00fan acto especial, algo llamativo, y nos juntamos. La mayor parte de nuestras amistades son de la colonia.\n\nFormamos aqu\u00ed parte de la Ben\u00e9verit. Seguramente la has escuchado nombrar a la Ben\u00e9verit. No, \u00bfqu\u00e9 es?\n\n\n<span class=\"speaker-eric\">Eric</span>\n\u00bfQu\u00e9 es la Ben\u00e9verit? \n\n<span class=\"speaker-jaime\">Jaime</span>\nLa Ben\u00e9verit es una instituci\u00f3n cultural jud\u00eda. Est\u00e1 en todo el mundo. Tiene bastante peso en Israel tambi\u00e9n. En Estados Unidos es muy grande.\n\nEst\u00e1 en todos los estados pr\u00e1cticamente. Y nosotros somos miembros de ella. Yo fui un buen tiempo presidente de la filial ac\u00e1.\n\n<span class=\"speaker-ruby\">Ruby</span>\n\u00bfYafne? \n\n<span class=\"speaker-ruby\">Ruby</span>\nQue se llama Yafne.\n\n<span class=\"speaker-jaime\">Jaime</span>\nY la mayor parte de nuestras amistades, relaciones y actividades est\u00e1n en relaci\u00f3n con la comunidad.\n\n<span class=\"speaker-eric\">Eric</span>\n\u00bfY tu familia? \n\n<span class=\"speaker-jaime\">Jaime</span>\nFormamos parte del estadio Israelita y posteriormente del club deportivo Israelita que es un club de golf.\nAs\u00ed que estamos adentro, digamos. \n\n<span class=\"speaker-eric\">Eric</span>\n\u00bfY tu familia, los Koifman? \n\n<span class=\"speaker-jaime\">Jaime</span>\n\u00bfPerd\u00f3n?\n\n<span class=\"speaker-eric\">Eric</span>\nUna de las cosas que siempre me preguntaba es que para nuestra familia en Chile como que todo lo del salami y el jam\u00f3n y comer cosas as\u00ed como que siempre ha sido una gran parte de la comida que hemos comido. Y siempre me preguntaba si -- porque escuch\u00e9 que Abram era medio religioso, era mucho m\u00e1s religioso.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-6\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(722); return false;\">0:12:02</a>\n\u00bfMi pap\u00e1?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(723); return false;\">0:12:03</a>\nS\u00ed.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(725); return false;\">0:12:05</a>\nNo, no era mucho, era poco pero respetaba la festividad jud\u00eda iba a rezar al templo, a la sinagoga esas cosas s\u00ed pero m\u00e1s all\u00e1 no.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(741); return false;\">0:12:21</a>\nAs\u00ed que \u00e9l, aunque rezaba, no era kosher.\n\n<span class=\"speaker-ruby\">Ruby</span>\nNadie!\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-7\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(747); return false;\">0:12:27</a>\nNadie era kosher dentro de nosotros solamente mis abuelos. Mis abuelos por parte de mi padre. Ellos s\u00ed que eran religiosos.\n\nEl abuelo era, no s\u00e9 si conoce el nombre era Shomes del Shil Shomes creo que es el guardi\u00e1n de la sinagoga. Y fue toda su vida muy religioso.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(782); return false;\">0:13:02</a>\nY... Lo siento, parece que est\u00e1 pasando un cami\u00f3n de basura.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(788); return false;\">0:13:08</a>\nS\u00ed, s\u00ed, oigo. S\u00ed, est\u00e1 oy\u00e9ndolo Rubi.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(792); return false;\">0:13:12</a>\nVoy a moverme a un lugar sin tantos ruidos. S\u00ed, otra pregunta que ten\u00eda es que si \u00e9l, Abraham alguna vez habl\u00f3 sobre si ten\u00eda hermanos o hermanas que dej\u00f3 atr\u00e1s y los volvi\u00f3 a ver jam\u00e1s.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-9\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(829); return false;\">0:13:49</a>\nS\u00ed, eso quer\u00eda coment\u00e1rtelo porque es un cap\u00edtulo especial. Yo no le conoc\u00ed hermanos aunque en una oportunidad yo creo que tuvo dos o tres hermanos. Uno de ellos mujer.\n\nLa vimos una vez que fuimos a Israel y ellos nos ubicaron creo que en Tel Aviv perd\u00f3n, no en Tel Aviv sino que en Haifa. Pero nunca m\u00e1s, no s\u00e9 por qu\u00e9 circunstancia nos volvimos a encontrar. Nunca m\u00e1s, yo s\u00e9.\n\nEllos fueron de Ruman\u00eda cuando fue la guerra mundial ellos se fueron a Israel y se quedaron ah\u00ed. Pero no hemos tenido mayor contacto. El apellido de ellos es Coifman desde luego.\n\n\u00bfMe escuchaste ah\u00ed bien o no?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(897); return false;\">0:14:57</a>\nS\u00ed, muy bien, perfecto. \u00bfMe escuchas a m\u00ed?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(900); return false;\">0:15:00</a>\nNo s\u00e9 en qu\u00e9 medida quieres saber de los otros hermanos de mi mam\u00e1 porque esa es la familia con la que vivimos en Chile. Tal vez no sea mucho inter\u00e9s para ti, pero s\u00ed.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(918); return false;\">0:15:18</a>\nNo, s\u00ed, me encantar\u00eda.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-10\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(924); return false;\">0:15:24</a>\nEntonces voy a esa parte. Voy con los hermanos mis hermanos de entonces la hermana mayor se llamaba Ester se cas\u00f3 con un se\u00f1or Busel y tuvo tres hijos Jacobo, Julio y Marcos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(956); return false;\">0:15:56</a>\nAh s\u00ed, parece que estamos en Mois\u00e9s.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(960); return false;\">0:16:00</a>\n\u00bfTe lo dices ya?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(961); return false;\">0:16:01</a>\nMe hab\u00edas contado eso, pero no sobre Mois\u00e9s, Jos\u00e9 y Israel. Ah, sobre Israel tambi\u00e9n.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(967); return false;\">0:16:07</a>\nMois\u00e9s. Ya, Mois\u00e9s tuvo una sola hija que se llamaba Frida. Falleci\u00f3 hace dos meses atr\u00e1s y dej\u00f3 un hijo que naci\u00f3 exactamente cuando ella, es decir un poco tiempo antes que ella falleciera. No tenemos mucho contacto con ella.\n\n<span class=\"speaker-ruby\">Ruby</span>\nAh\u00ed est\u00e1y equivocado. \n\n<span class=\"speaker-jaime\">Jaime</span>\nNo estoy equivocado, me fue a verlo. \n\n<span class=\"speaker-ruby\">Ruby</span>\n\u00bfNaci\u00f3 dos veces antes que su mam\u00e1 falleciera?\n\n<span class=\"speaker-jaime\">Jaime</span>\nS\u00ed, algo as\u00ed. \n\n<span class=\"speaker-ruby\">Ruby</span>\n\u00bfC\u00f3mo va a nacer dos veces antes que la mam\u00e1 fallezca?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1015); return false;\">0:16:55</a>\n\u00bfO puede ser que se haya muerto la esposa de Mois\u00e9s al nacer Frida?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1021); return false;\">0:17:01</a>\nPerd\u00f3n. \u00c9l naci\u00f3 antes de Frida. S\u00ed, estaba haciendo una confusi\u00f3n yo, bastante tonta. Tenemos eso. Mois\u00e9s tuvo a la Frida, hija \u00fanica.\n\nJos\u00e9 se cas\u00f3 con Ester Goffman. \u00bfCu\u00e1ntos hijos tienen? Est\u00e1n en Israel.\n\nJos\u00e9 hizo aliyah, vive en Israel. \u00c9l muri\u00f3 ya, pero vive en Israel y tiene hijos, nietos all\u00e1.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1100); return false;\">0:18:20</a>\nAs\u00ed que ten\u00edas muchos primos.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-11\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1106); return false;\">0:18:26</a>\nExactamente. No hemos tenido mucho contacto porque hab\u00eda muchas diferencias de edades y de actividades. As\u00ed que no hubo muchas actividades en conjunto.\n\nAh\u00ed siempre los que estuvimos m\u00e1s cerca fuimos Le\u00f3n y yo, con Israel un poco m\u00e1s alejados. Israel vivi\u00f3 unos cuantos a\u00f1os en Estados Unidos, otros a\u00f1os en Brasil. Era lo que decimos en Chile, un pata de perro.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1140); return false;\">0:19:00</a>\nSiempre movi\u00e9ndose.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1142); return false;\">0:19:02</a>\nPor todos lados. Eso es lo que te puedo contar respecto a nombres y relaciones. Preg\u00fantame un poquito t\u00fa lo que te interesa o lo que quisieras que yo agregara.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1172); return false;\">0:19:32</a>\nViv\u00edan con esta familia extendida o viv\u00edan solo con los pap\u00e1s y los hermanos?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-12\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1183); return false;\">0:19:43</a>\nTodos viv\u00edamos, sus padres. No viv\u00edan la familia juntas. No viv\u00edamos juntos, pero nos relacion\u00e1bamos en cierta medida.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1203); return false;\">0:20:03</a>\n\u00bfEn qu\u00e9 vecindario? \u00bfTe acuerdas del vecindario?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1209); return false;\">0:20:09</a>\nViv\u00edamos cerca, y cuando viv\u00edan los abuelos todav\u00eda, la abuela celebraba todos las actividades jud\u00edas en su casa. Hac\u00eda la comida, la comida de pesach, por ejemplo. Y las otra, el yom kiuppur, en la casa de la abuela.\n\n\u00bfY Shabat? Y algunos Shabats tambi\u00e9n los celebr\u00e1bamos juntos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1238); return false;\">0:20:38</a>\n\u00bfY ustedes? Escuch\u00e9 que Le\u00f3n hab\u00eda hecho un poco de atletismo y f\u00fatbol. \u00bfY t\u00fa tambi\u00e9n?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-13\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1253); return false;\">0:20:53</a>\nBueno, Le\u00f3n ten\u00eda la virtud de tener un muy buen f\u00edsico para deporte. Jugaba varios deportes, al era buen esquiador, buen tenista. Yo tambi\u00e9n soy deportista, pero desgraciadamente, fui siempre un poco gordito, as\u00ed que mis cualidades deportivas no eran muy brillantes, pero siempre hac\u00eda actividades deportivas.\n\nLe\u00f3n ten\u00eda un casa, un refugio en la nieve. Yo tambi\u00e9n ten\u00eda un refugio en la nieve. Ah\u00ed nos ve\u00edamos b\u00e1sicamente todos los fines de semana. \n\nY Le\u00f3n ten\u00eda una casa en un lago al sur, a la cual iba frecuentemente, no en invierno, sino que en verano. Nosotros ten\u00edamos tambi\u00e9n una casa en un pueblo que est\u00e1 cerca, que es Concon.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1320); return false;\">0:22:00</a>\nNo s\u00e9 si lo conociste, \u00bfalg\u00fan otro viaje para ac\u00e1? No, nunca estaba en Concon.\n\n<span class=\"speaker-ruby\">Ruby</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1328); return false;\">0:22:08</a>\nConcon est\u00e1 cerca de Valpara\u00edso. \n\nJose\nCerca de Valpara\u00edso est\u00e1 Concon.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1335); return false;\">0:22:15</a>\nA la pr\u00f3xima entonces, en diciembre quiz\u00e1s.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1338); return false;\">0:22:18</a>\nA la pr\u00f3xima con mucho gusto.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1343); return false;\">0:22:23</a>\nHay una cosa m\u00e1s que hab\u00eda escuchado. Estas son puras cosas que mi pap\u00e1 pensaba haber escuchado alguna vez, pero \u00e9l me cont\u00f3 que cuando ustedes eran ni\u00f1os la Leikie se preocupaba mucho por que no jugaran f\u00fatbol, y que no salieran a la calle, y como que no se hirieran. No s\u00e9 si es verdad.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-14\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1371); return false;\">0:22:51</a>\nS\u00ed, era temerosa. Acu\u00e9rdate que eran los a\u00f1os en que curar algo era dif\u00edcil y delicado... era no con la certeza ahora. As\u00ed que siempre nos cuidaba bastante, y que estuvi\u00e9ramos cerca.\n\nQue no estuvi\u00e9ramos muy lejos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1393); return false;\">0:23:13</a>\nBueno, la \u00faltima pregunta, al menos que ten\u00edas alguna otra cosa, fue que si te acuerdas de algunas expresiones, o sean en yidish o en castellano, que sol\u00edan decir tus pap\u00e1s o tus abuelos, no s\u00e9, cosas que se te pegaron, como que cosas que dec\u00edan seguido. \n\n<span class=\"speaker-jaime\">Jaime</span>\n<div id=\"section-15\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1414); return false;\">0:23:34</a>\nMira la que nos dec\u00edamos mas habitualmente entre Le\u00f3n y yo ere Kissen mein tuchus. No se, seguramente: \"b\u00e9same el culo.\"\n\n<span class=\"speaker-eric\">Eric</span>\nEse era el insulto.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1437); return false;\">0:23:57</a>\nAhora, la verdad, la cosa que, Leon yo creo que un poco menos, pero yo hablo bastante yidish, entiendo bastante yiddish, y me puedo expresar tambi\u00e9n. Hemos ido unas cuatro o cinco veces a Israel, por diversas razones. Yo estuve mucho m\u00e1s ligado a instituciones jud\u00edas que en Leon.\n\nLeon, la instituci\u00f3n que estuvo m\u00e1s ligado fue el Rotary Club, que seguramente no conoces, era lo que m\u00e1s le atrajo. Y una serie de otras actividades. \n\nYo estaba m\u00e1s metido, porque estaba en la Bnei Berit, y estaba m\u00e1s cerca tambi\u00e9n del Estadio Israelita... as\u00ed que estaba m\u00e1s entrometido con actividades jud\u00edas.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1502); return false;\">0:25:02</a>\n\u00bfY sabes c\u00f3mo se conocieron Leon y Rosita? \u00bfO te acuerdas algo de esa \u00e9poca? Porque la Rosita ni se acuerda.\n\n<span class=\"speaker-ruby\">Ruby</span>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1519); return false;\">0:25:19</a>\nYo creo que la Rosy no quiere acordarse. \n\n<span class=\"speaker-jaime\">Jaime</span>\nRealmente no me acuerdo mucho, pero ah\u00ed siempre nos conoc\u00edamos, o en el estadio, o en alguna de las festividades jud\u00edas, o si ten\u00edamos alguna relaci\u00f3n con el Colegio Hebreo, aunque Leon y yo no estudiamos en el Colegio Hebreo.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1548); return false;\">0:25:48</a>\nPero iban a fiestas y todo se circulaba en el mismo mundo, en las mismas fiestas.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-16\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1556); return false;\">0:25:56</a>\nNo, porque ten\u00edamos una diferencia de cinco a\u00f1os. Y cinco a\u00f1os es una buena diferencia. Es decir, por ejemplo, yo estaba en la escuela secundaria, en Humanidades, y Leon ya estaba en la universidad, \u00bfte fijas?\n\nEst\u00e1bamos bastante separados en el grupo de amistades y as\u00ed. As\u00ed que no particip\u00e1bamos exactamente en lo mismo. Pero est\u00e1bamos bastante cerca siempre.\n\n<span class=\"speaker-ruby\">Ruby</span>\nYo estaba en preparatoria y t\u00fa estabas en la universidad. \n\n<span class=\"speaker-jaime\">Jaime</span>\nLa diferencia con Ruby era bastante grande.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1607); return false;\">0:26:47</a>\nY el Zulo a\u00fan m\u00e1s, \u00bfno es cierto? El Zulo era mucho menor que ustedes.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-17\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1611); return false;\">0:26:51</a>\nZulo era mucho menor y fue un ni\u00f1o m\u00e1s problem\u00e1tico para nosotros. Fue al colegio, despu\u00e9s se... Era m\u00e1s dif\u00edcil pillarlo a Zulo, porque la diferencia de edades era muy grande.\n\n\u00c9l hizo sus amistades y despu\u00e9s no sigui\u00f3 ninguna carrera universitaria. And\u00f3 a la escuela temprano y se dedic\u00f3 cuando pudo a viajar, tal como te dec\u00eda. \n\n<span class=\"speaker-ruby\">Ruby</span>\nPero Zulo se cas\u00f3 con la mam\u00e1 de la Daniela y despu\u00e9s se separaron. Y despu\u00e9s se junt\u00f3 o se cas\u00f3 con otra mujer y vivi\u00f3 muy feliz con ella.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1666); return false;\">0:27:46</a>\n\u00bfVivieron feliz hasta el final juntos? \n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1670); return false;\">0:27:50</a>\nSi. Yo ten\u00eda un negocio... No s\u00e9 si supiste uno de los negocios, Art\u00edculos Deltales, Art\u00edculos Delta 11, que es mi especialidad. Y lo invit\u00e9 a Zulo, en los \u00faltimos a\u00f1os de su vida, a trabajar conmigo.\n\nTrabaj\u00f3 en mi oficina y lamentablemente hasta el momento que se enferm\u00f3, tuvo una infecci\u00f3n que abarc\u00f3 el coraz\u00f3n. Una operaci\u00f3n de por medio y desgraciadamente falleci\u00f3 ah\u00ed.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1707); return false;\">0:28:27</a>\nAh, \u00bfen la oficina?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1710); return false;\">0:28:30</a>\nS\u00ed, falleci\u00f3 en la cl\u00ednica, pero eran los tiempos que estaba trabajando conmigo. Bueno, ah\u00ed se te aclar\u00f3 bastante el panorama de la familia.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1730); return false;\">0:28:50</a>\nS\u00ed, muchas gracias. Realmente lo anot\u00e9 todo y lo voy a organizar en un documento porque mis primos, los hijos de la hija de Roberto, tambi\u00e9n quer\u00edan saber. As\u00ed que les voy a mandar esta informaci\u00f3n.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1747); return false;\">0:29:07</a>\nM\u00e1ndasela con mucho gusto y cualquier cosa...\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1753); return false;\">0:29:13</a>\nTienes el tel\u00e9fono m\u00edo, \u00bfno es cierto? Ah, una cosa m\u00e1s.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1759); return false;\">0:29:19</a>\nVenga por tel\u00e9fono y conversamos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1761); return false;\">0:29:21</a>\nSi no te molesta, una pregunta m\u00e1s nom\u00e1s.\n\n<span class=\"speaker-ruby\">Ruby</span>\nDale. \n\n<span class=\"speaker-eric\">Eric</span>\n\u00bfSabes algo m\u00e1s de ese viaje de Abram a Chile? \u00bfY por qu\u00e9 termin\u00f3 en Chile espec\u00edficamente? \u00bfSabes por qu\u00e9 termin\u00f3 en Chile? Escuch\u00e9 que cosechaba papas en Argentina unos a\u00f1os o algo as\u00ed, unos meses.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1786); return false;\">0:29:46</a>\nNo entend\u00ed bien la pregunta. Espera un poquito. \n\n<span class=\"speaker-ruby\">Ruby</span>\nPorque tu papa se vino a Chile y no a otra parta, porque a Chile? Trabajaba en Argentina en agricultura? Nunca escuch\u00e9 eso. \n\n<span class=\"speaker-jaime\">Jaime</span>\nNo escuch\u00e9 que mis padres trabajaran en agricultura.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1817); return false;\">0:30:17</a>\nEso es lo que me cont\u00f3 mi pap\u00e1. No s\u00e9 por qu\u00e9 es algo tan espec\u00edfico el cuento, pero me dijo que hab\u00eda cosechado papas algunos meses en Argentina y que conoci\u00f3 a un chileno o alguien que dijo me voy a Chile, vayamos a Chile juntos.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-18\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1832); return false;\">0:30:32</a>\nNo, no. No, esa parte yo no la tengo as\u00ed. Se vino desde luego desde Ruman\u00eda, en Brasil, en Montevideo, en Buenos Aires.\n\nNo le gustaron ninguno de esos pa\u00edses primero. Se baj\u00f3 en Buenos Aires. Estuvo ah\u00ed un tiempo breve y prefiri\u00f3 seguir a Chile.\n\nSe vino a Chile, ah\u00ed se llegaba en tren en esos tiempos. Se relacion\u00f3 con la colectividad y conoci\u00f3 a trav\u00e9s de la colectividad a la mam\u00e1 y se casaron ambos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1884); return false;\">0:31:24</a>\n\u00bfA poco tiempo?\n\n<span class=\"speaker-ruby\">Ruby</span>\n<div id=\"section-19\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1887); return false;\">0:31:27</a>\nS\u00ed. Pero era una persona muy, muy amorosa. Era bien encantador, por lo menos conmigo.\nEra una persona realmente muy exquisita conmigo. \n\n<span class=\"speaker-jaime\">Jaime</span>\nMi pap\u00e1 era una persona cari\u00f1osa y amable, gentil. Nunca, es decir, trabaj\u00f3, trabaj\u00f3.\n\nNo era hombre que quisiera fructificar el dinero. Fue siempre modesto en lo que se refiere a sus rechazas, a sus ingresos. Y llevamos una vida con \u00e9l modesta, pero correcta, decente.\n\nNo nos falt\u00f3 el pan ni la leche. Y estuvimos bien, modestamente, pero bien con \u00e9l.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1943); return false;\">0:32:23</a>\n\u00bfEn qu\u00e9 trabajada cuando lleg\u00f3 a Chile o cuando ustedes se estaban criando?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<div id=\"section-20\" class=\"section-anchor\"></div>\n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1949); return false;\">0:32:29</a>\nMira, en primer tiempo trabajaba... \u00bfEscuchaste alguna vez la palabra Semanalchik?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1959); return false;\">0:32:39</a>\nS\u00ed, alguien me cont\u00f3 algo as\u00ed, no s\u00e9 si fue la Ruby quiz\u00e1s.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(1964); return false;\">0:32:44</a>\nO la Ruby tal vez. Semanalchic era... yo ofrec\u00eda la personal de f\u00e1bricas y les cobraba semanalmente, pasaba a cobrarles, les vend\u00eda cr\u00e9dito.\n\nFue una actividad muy popular por all\u00e1 por los a\u00f1os de 1920 a 1940, algo as\u00ed. Despu\u00e9s eso desapareci\u00f3. El pap\u00e1 sigui\u00f3 viajando, ya no como Semanalchic, pero viajaba a los pueblos vecinos, a Santiago.\n\nUn viaje, digamos, que durar\u00eda dos horas o tres horas, algo as\u00ed. Y en eso trabajaba. \n\n<span class=\"speaker-ruby\">Ruby</span>\n\u00bfQu\u00e9 tal es lo de la tela de los jeans?\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2026); return false;\">0:33:46</a>\n\u00bfQu\u00e9 hizo de los jeans?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2028); return false;\">0:33:48</a>\nYa mucho tiempo despu\u00e9s, cuando salieron los blue jeans, tuvo la oportunidad de comprar esa tela y se puso a fabricar con un socio blue jeans.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2045); return false;\">0:34:05</a>\nAh, \u00bfs\u00ed?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2045); return false;\">0:34:05</a>\nS\u00ed, se pusieron de moda.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2047); return false;\">0:34:07</a>\nPero no tuvo ning\u00fan gran \u00e9xito con eso, ni le dur\u00f3 mucho tiempo tampoco. \u00bfEso fue como en los a\u00f1os 60 por ah\u00ed?\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2061); return false;\">0:34:21</a>\nS\u00ed, aproximadamente. Antes yo dir\u00eda m\u00e1s bien en los 60.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2073); return false;\">0:34:33</a>\nYa, bueno, si se me ocurre alguna pregunta, te mando otro mensaje. Pero muchas gracias por conversar conmigo, realmente te lo agradezco.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2082); return false;\">0:34:42</a>\nEs un placer, y si te result\u00f3 \u00fatil esto y te dej\u00f3 m\u00e1s adentro de la familia, me alegro mucho, personalmente.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2092); return false;\">0:34:52</a>\nS\u00ed, muchas gracias.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2093); return false;\">0:34:53</a>\nY bienvenido. Y dale saludos a tu viejo cuando lo vea, a tu mam\u00e1 tambi\u00e9n, y que est\u00e9n todos bien.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2104); return false;\">0:35:04</a>\nY a ustedes tambi\u00e9n, espero que puedan salir de cuarentena pronto. Gracias.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2109); return false;\">0:35:09</a>\nChao a todos.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2110); return false;\">0:35:10</a>\nChao. Chao, Rubi.\n\n<span class=\"speaker-jaime\">Jaime</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2115); return false;\">0:35:15</a>\nChao, chao.\n\n<span class=\"speaker-eric\">Eric</span> \n<a href=\"#\" class=\"timestamp\" onclick=\"jumpToTime(2117); return false;\">0:35:17</a>\nChao. Chao.";
         function showTranscript(lang) {
             transcriptPre.innerHTML = (lang === "english") ? transcriptEnglish : transcriptSpanish;
         }
-        showTranscript("spanish");
+        
 
-        // Audio jump function.
+        // Audio jump function
         function jumpToTime(seconds) {
             var audio = document.getElementById("audioPlayer");
             audio.currentTime = seconds;
             audio.play();
         }
 
-        // Function to jump to a section.
+        // Function to jump to a section
         function jumpToSection(sectionId, seconds) {
             jumpToTime(seconds);
             var anchor = document.getElementById(sectionId);
@@ -1107,14 +1175,15 @@ Chao. Chao.                </pre>
             updateImageForSection(currentSectionId);
         }
 
-        // Update TOC and main image based on scroll position in transcript.
+        // Update TOC & image based on scroll position in transcript
         var scrollDiv = document.getElementById("right-column");
         if (scrollDiv) {
             scrollDiv.addEventListener("scroll", function() {
                 var containerRect = scrollDiv.getBoundingClientRect();
+                var combined = mainPointsEn.concat(mainPointsEs);
                 var closestSectionId = "";
                 var minDiff = Infinity;
-                mainPoints.forEach(function(point) {
+                combined.forEach(function(point) {
                     var anchor = document.getElementById(point.id);
                     if (anchor) {
                         var diff = Math.abs(anchor.getBoundingClientRect().top - containerRect.top);
@@ -1132,25 +1201,27 @@ Chao. Chao.                </pre>
             });
         }
 
-        // Current section starts at section-1.
-        var currentSectionId = "section-1";
-        updateToc();
+        // Current section starts at the first Spanish section if available, otherwise English
+        var currentSectionId = (mainPointsEs.length > 0) ? mainPointsEs[0].id
+                                : (mainPointsEn.length > 0) ? mainPointsEn[0].id
+                                : "";
+        // Initialize TOC & image
+        showToc("spanish");
         updateImageForSection(currentSectionId);
 
-        /* ===================== Gallery Popup Functions ===================== */
-        // Open gallery popup. By default, use the current main page image.
+        // Open gallery popup
         function openGallery() {
             document.getElementById("gallery-popup").style.display = "block";
-            // Set the full pane image to the current image.
             updateGalleryImage(currentSectionId);
-            // Populate thumbnails.
             populateGalleryThumbnails();
         }
-        // Close gallery popup.
+
+        // Close gallery popup
         function closeGallery() {
             document.getElementById("gallery-popup").style.display = "none";
         }
-        // Populate the thumbnails in the gallery.
+
+        // Populate gallery thumbnails
         function populateGalleryThumbnails() {
             var thumbsPane = document.getElementById("gallery-thumbs-pane");
             thumbsPane.innerHTML = "";
@@ -1159,19 +1230,18 @@ Chao. Chao.                </pre>
                 var thumb = document.createElement("img");
                 thumb.src = imgObj.src;
                 thumb.onclick = function() {
-                    // When a thumbnail is clicked, update the full pane.
                     document.getElementById("gallery-full").src = imgObj.src;
                     document.getElementById("gallery-full-title").textContent = imgObj.textContent.split(".")[0];
                     document.getElementById("gallery-full-subtitle").textContent = imgObj.textContent;
-                    // Highlight this thumbnail.
                     var allThumbs = thumbsPane.getElementsByTagName("img");
                     for (var i = 0; i < allThumbs.length; i++) {
                         allThumbs[i].classList.remove("selected");
                     }
                     thumb.classList.add("selected");
                 };
-                // If the current main page image matches this thumbnail, mark it as selected.
-                var currentPoint = mainPoints.find(function(pt) {
+                var currentPoint = mainPointsEs.find(function(pt) {
+                    return pt.hasOwnProperty("image") && pt.image === key;
+                }) || mainPointsEn.find(function(pt) {
                     return pt.hasOwnProperty("image") && pt.image === key;
                 });
                 if (currentPoint && currentPoint.id === currentSectionId) {
