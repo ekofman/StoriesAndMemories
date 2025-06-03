@@ -3,25 +3,41 @@
     "src": "images/ester_as_young_woman.jpg",
     "textContent": "Ester. Ester as a young woman (1926?)"
   },
+  "Sprintze_Jaikles": {
+    "src": "images/Sprintze_Jaikles.jpg",
+    "textContent": "The matriarch. A photo of Sprintze Jaikles back in Orhei (1908?)."
+  },
+  "Sprintze_Mikhael_Jaikles": {
+    "src": "images/ShprintzeMikhael.jpg",
+    "textContent": "Top of the Family Tree. Sprintze and Michael (Mosher) Jaikles (1908?)."
+  },
+  "graf_waldersee": {
+    "src": "images/GrafWaldersee.png",
+    "textContent": "Graf Waldersee. An illustration of the Graf Waldersee, the ship on which the Jaikles -- Mikhael, Sprintze, Bine, Faje and Zipe -- sailed from Hamburg to New York."
+  },
+  "ship_manifest": {
+    "src": "images/ship_manifest.png",
+    "textContent": "Passenger records for the Jaikles' Hamburg-New York journey. They are listed at the bottom, as Mosher/Mocher, Sprinse, Zipe, Paje, and Bine Chaikilis. You can see on the right-hand columns that the women of the group are listed as “Schneiderin,” or seamstresses, while Mocher is listed as “Händler,” or merchant. Their hometown is listed as Telenesh, Russia."
+  },
+  "ellis_island_arrival": {
+    "src": "images/ellis_island_arrival.png",
+    "textContent": "Ellis Island records for the Chaikilis family. It looks as if they mentioned a relative “Hersch Jeikilz/Leikisz” (?) who lived at 271 E Broadway (the Lower East Side, which at the time was the biggest Jewish community in the world, boasting about 500,000 Jews)  with whom they planned to stay in New York. They also mentioned a brother, Ledel/Jedel Chaikilis of Telensti, listed as their nearest relative back in their hometown. The S.I. next to their names indicates that they were held and interviewed for “Special Inquiry.”"
+  },
+  "ellis_island_si": {
+    "src": "images/ellis_island_si.png",
+    "textContent": "Special Inquiry detention documentation for Cheikilis family. Med. Cert. stands for “Medical Certificate”, and LPC was the short code used for aliens “likely to become public charges.” Immigration Inspector James McGregor handled their case, interviewing them to make sure that they had the means and connections to get themselves on their feet economically. They were finally admitted into the United States on March 23rd at 4:00 PM.In the right-hand column it is noted that 20 breakfasts, lunches and suppers were served to the family during the period in which they were detained, which we can assume lasted 4 days. The government would bill the Hamburg-Amerika line steamship company for the cost of these meals. The steamship company was thus incentivized not to allow potential LPCs aboard its ships."
+  },
+"sara_and_ruben": {
+   "src": "images/sara_and_ruben.jpeg",
+   "textContent": "Sarah, Ruben, Gregorio and Ester (~1912)"
+ },
   "boarding_lisbon": {
     "src": "images/boarding_in_lisbon.png",
     "textContent": "Escaping Through Lisbon, 1939. Brana and Mina are the two young women in the third row from the front. Favel and Mane Haichelis are the couple at the top of the steps. Nune Haichelis is in the front by the child. In the second row from the front, Gregorio is on the very left and Miguel is on the very right."
   },
-  "Sprintze_Jaikles": {
-    "src": "images/Sprintze_Jaikles.jpg",
-    "textContent": "The matriarch. A photo of Sprintze Jaikles back in Orhei (1915?)."
-  },
-  "Sprintze_Mikhael_Jaikles": {
-    "src": "images/ShprintzeMikhael.jpg",
-    "textContent": "Top of the Family Tree. Sprintze and Michael (Mosher) Jaikles (1915?)."
-  },
   "rosita_young_overcoat": {
     "src": "images/rosita_young_overcoat.png",
     "textContent": "Rosita. A young Rosa Greiber posing in about 1934."
-  },
-  "rosita_nano_young": {
-    "src": "images/rosita_nano_young.png",
-    "textContent": "Rosita and Nano. The two children pose in about 1936."
   },
   "Valparaiso": {
     "src": "images/ester_rosita_nano_1941_valparaiso.jpg",
@@ -30,14 +46,6 @@
   "ester_husband": {
     "src": "images/ester_and_gregorio_vugman.JPG",
     "textContent": "In-laws. Ester and her second husband, along with brother Gregorio and his wife (1950s?)"
-  },
-  "graf_waldersee": {
-    "src": "images/GrafWaldersee.png",
-    "textContent": "Graf Waldersee. An illustration of the Graf Waldersee, the ship on which the Jaikles sailed from Hamburg to New York."
-  },
-  "ship_manifest": {
-    "src": "images/ship_manifest.png",
-    "textContent": "Passenger records for the Jaikles' Hamburg-New York journey. They are listed at the bottom, as Mosher/Mocher, Sprinse, Zipe, Paje, and Bine Chaikilis. You can see on the right-hand columns that the women of the group are listed as “Schneiderin,” or seamstresses, while Mocher is listed as “Händler,” or merchant. Their hometown is listed as Telenesh, Russia."
   },
   "mari": {
     "src": "mari.jpg",
@@ -114,10 +122,6 @@
  "chillan_earthquake": {
    "src": "images/chillan_earthquake.jpeg",
    "textContent": "Chillan Earthquake, 1939"
- },
-"sara_and_ruben": {
-   "src": "images/sara_and_ruben.jpeg",
-   "textContent": "Sarah, Ruben, Gregorio and Ester (~1912)"
  },
  "union_israelita": {
    "src": "images/union_israelita.png",

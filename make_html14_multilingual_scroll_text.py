@@ -221,8 +221,8 @@ audio {{
 /* Main Container for Two Vertical Columns */
 #main-container {{
   display: flex;
-  gap: 20px;
-  height: calc(100vh - 140px);
+  gap: 12px;
+  height: calc(90vh - 130px);
 }}
 
 /* Left Column: Buttons, Image Subtitle, Image, TOC, and TOC Toggle */
@@ -491,9 +491,10 @@ audio {{
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>{config["page_title"]}</h1>
+    <span style="font-size: 12pt;"><u><b>Recuerdos y Cuentos de la Familia:</b> <span>{config["page_title"]}</span></u></span>
+    
     <div style="font-size: 0.8em; padding-top: 0px;"><i>
-<div><b>Navégue los entrevistas a través de los links a la izquierda en el "Table of Contents" o los conectados a las indicaciones de tiempo en la sección con las transcripciónes a la derecha (i.e. 0:13:49). Haga click en "Open Gallery" para ver todas las fotos.</b>
+<div style="font-size: 10pt;"><b>Navégue los entrevistas a través de clicks en "Resumen de Secciones" o en las indicaciones de tiempo en la sección con las transcripciónes. Haga click en "Galeria" para ver todas las fotos.</b>
 <div id="acknowledgements">
 <div>* Muchas gracias a todos los participantes, entre cuales algunos ya no están con nosotros. Espero que las grabaciones sirvan como bonitos recuerdos, preservando a personalidades y cuentos únicos. </div>
 
@@ -512,25 +513,19 @@ audio {{
     <div id="main-container">
         <!-- Left Column: Image Controls, Image, TOC Toggle, TOC, and Gallery Link -->
         <div id="left-column">
-            <div id="buttons">
-                <button id="prev-image" onclick="prevImage()">&#9664;</button>
-                <button id="next-image" onclick="nextImage()">&#9654;</button>
-            </div>
             <div id="image-subtitle">Ester. Ester as a young woman (1926?)</div>
             <div id="image-container">
                 <img id="current-image" src="images/ester_as_young_woman.jpg" alt="Image">
             </div>
             <div id="gallery-link" style="text-align:center; margin:5px;">
-                <button onclick="openGallery()">Open Gallery</button>
+                <button onclick="openGallery()">Galeria</button>
             </div>
 
             <!-- TOC Toggle Buttons -->
-            <div id="toc-title">
-                <h2>Table of Contents</h2>
-                <div id="toc-toggle">
-                    <button onclick="showToc('spanish')">Español</button>
-                    <button onclick="showToc('english')">English</button>
-                </div>
+            <div id="toc-title" style="padding: 2px;">
+                <span id="toc-toggle"><button style="margin: 5px;" onclick="showToc('spanish')">Español</button></span> 
+		<span style="font-size: 12px; padding-top: 0px;"><b>Resumen de Secciones</b></span>
+                <span id="toc-toggle"><button style="margin: 5px;" onclick="showToc('english')">English</button></span>
             </div>
 
             <!-- Spanish TOC (visible by default) -->
@@ -551,7 +546,7 @@ audio {{
         <!-- Right Column: Transcript (toggle shown only if both languages exist) -->
         <div id="right-column">
             {f"""<div id="transcript-toggle">
-                <button onclick="showTranscript('spanish')">Spanish</button>
+                <button onclick="showTranscript('spanish')">Español</button>
                 <button onclick="showTranscript('english')">English</button>
             </div>""" if show_transcript_toggle else ""}
             <div id="transcript-content">
